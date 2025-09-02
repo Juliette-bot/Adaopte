@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/css/adopt.css" rel="stylesheet">
     <title>Adaopte</title>
 </head>
 
@@ -88,7 +89,30 @@
     </header>
 
 
-    <main></main>
+    <main>
+        <section id="container-grid-adopte">
+            <form id="container-research-adopt">
+                <label id="grid-types-animaux" name="grid-types-animaux">
+                    Types d'animal
+                    <select id="select-adopt">
+                        <option name="">Tous les animaux</option>
+                        <option name="dog" id="dog-select">Chien</option>
+                        <option name="cat" id="cat-select">Chat</option>
+                        <option name="rabbit" id="rabbit-select">Lapin</option>
+                        <option name="hamster" id="hamster-select">Hamster</option>
+                        <option name="guineapig" id="guineapig-select">Cochon d'inde</option>
+                    </select>
+                </label>
+                <label id="grid-localisation">
+                    Localisation
+                    <input type="text" name="localisation" id="localisation" placeholder="Votre ville">
+                </label>
+                <button type="submit" id="btn-research">Rechercher 🔎</button>
+                <label id="grid-animaux-trouvés">101 animaux trouvés</label>
+                <label id="grid-réinitialisation">Réinitialiser les filtres</label>
+            </form>
+        </section>
+    </main>
 </body>
 
 </html>
