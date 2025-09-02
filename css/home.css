@@ -1,0 +1,24 @@
+html {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#gridPhotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap : 15px;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.photos {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+ 
+
+}
