@@ -1,102 +1,163 @@
 html {
-    max-width: 100vw;
-    height: 100%;
+  max-width: 100vw;
+  height: 100%;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 12px;
-    margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+#researchSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    background-image:linear-gradient(rgba(230,230,230,0.1), rgba(0,0,0,0.8)), url("../assets/background.jpg");
+  background-position: center;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  max-height: 380px;
 }
 
+
+#titleXL {
+  justify-items: center;
+ font-family: "Amatic SC", sans-serif;
+  font-size: x-large;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 9.4vh;
+
+}
+#title-text {
+  color: white;
+  font-size: small;
+   font-family: "Roboto", sans-serif;
+   text-align: center;
+   max-width: 500px;
+}
+
+#mainText {
+  font-size: small;
+   font-family: "Roboto", sans-serif;
+   color: gray;
+   max-width: 500px;
+   text-align: center;
+
+}
+
+#form-wrapper {
+display: flex;
+max-width: 500px;
+
+}
+.research-home {
+ transform: translate(100px, 87px);
+ background-color: rgb(255, 255, 255);
+ border-radius: 10px;
+ height: 7.5vh;
+ margin-left: -13.2vw;
+}
+
+#textToAdopt {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 14vh;
+  margin-bottom: 10vh;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 2em;
+}
 h3 {
-    font-family: "Amatic SC", sans-serif;
-    font-style: normal;
-    font-size: 2em;
-    color: #FF6D39;
-    text-align: left;
+  font-family: "Amatic SC", sans-serif;
+  font-style: normal;
+  font-size: 2em;
+  color: #ff6d39;
+  text-align: left;
 }
 
 footer {
-    background-color: #333333;
-    padding: 1rem 0;
+  background-color: #333333;
+  padding: 1rem 0;
 }
 
 /*change la couleur des liens et retire le souligné*/
 footer a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 footer p {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #wrapper {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #item {
-    max-width: 400px;
-    max-height: 50px;
-    text-align: center;
+  max-width: 400px;
+  max-height: 50px;
+  text-align: center;
 }
 
 #brand,
 #info {
-    color: white;
-    text-align: left;
+  color: white;
+  text-align: left;
 }
 
 #logosMedias {
-    display: flex;
-    gap: .25rem;
+  display: flex;
+  gap: 0.25rem;
 }
 
 .footer-icon {
-    background-color: #484848;
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    padding: .5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #484848;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #info ul {
-    padding: 0;
+  padding: 0;
 }
 
 #contact {
-    color: white;
+  color: white;
 }
 
 #licence {
-    color: #979797;
+  color: #979797;
 }
 
 #licence p {
-    text-align: center;
+  text-align: center;
 }
 
 #gridPhotos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: auto;
-  gap : 15px;
+  gap: 15px;
+  margin: 50px;
 }
 
 .columns {
   display: flex;
   flex-direction: column;
   gap: 15px;
+ 
 }
 .photos {
   width: 100%;
   border-radius: 10px;
   display: block;
- 
-
+  max-height: 400px;
 }
