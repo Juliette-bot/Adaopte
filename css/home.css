@@ -1,5 +1,4 @@
 html {
-<<<<<<< HEAD
     max-width: 100vw;
     height: 100%;
 }
@@ -81,10 +80,6 @@ footer p {
 #licence p {
     text-align: center;
 }
-=======
-  max-width: 1440px;
-  margin: 0 auto;
-}
 
 #gridPhotos {
   display: grid;
@@ -105,4 +100,3 @@ footer p {
  
 
 }
->>>>>>> 3a4ba6dafdcec28425ec3dab11ec7b255cf16fd5
