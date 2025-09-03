@@ -1,6 +1,84 @@
 html {
-  max-width: 1440px;
-  margin: 0 auto;
+    max-width: 100vw;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+h3 {
+    font-family: "Amatic SC", sans-serif;
+    font-style: normal;
+    font-size: 2em;
+    color: #FF6D39;
+    text-align: left;
+}
+
+footer {
+    background-color: #333333;
+    padding: 1rem 0;
+}
+
+/*change la couleur des liens et retire le souligné*/
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-family: "Roboto", sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#item {
+    max-width: 400px;
+    max-height: 50px;
+    text-align: center;
+}
+
+#brand,
+#info {
+    color: white;
+    text-align: left;
+}
+
+#logosMedias {
+    display: flex;
+    gap: .25rem;
+}
+
+.footer-icon {
+    background-color: #484848;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info ul {
+    padding: 0;
+}
+
+#contact {
+    color: white;
+}
+
+#licence {
+    color: #979797;
+}
+
+#licence p {
+    text-align: center;
 }
 
 #gridPhotos {
