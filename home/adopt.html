@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <script defer src="../js/adopt.js"></script>
+    <script type="module" src="../js/adopt.js"  defer ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <link href="/css/adopt.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
     <title>Adaopte</title>
 </head>
 
@@ -53,7 +54,7 @@
                         <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
                         <path
                             d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                    </svg> Acceuil</a>
+                    </svg> Accueil</a>
                 <a class="elemLinkNavBar" href="../html/adopt.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" class="icone">
@@ -100,7 +101,7 @@
                         <option name="cat" id="cat-select">Chat</option>
                         <option name="rabbit" id="rabbit-select">Lapin</option>
                         <option name="hamster" id="hamster-select">Hamster</option>
-                        <option name="guineapig" id="guineapig-select">Cochon d'inde</option>
+                        <option name="gnawing" id="gnawing-select">Rongeur</option>
                     </select>
                 </label>
                 <label id="grid-localisation">
@@ -108,11 +109,55 @@
                     <input type="text" name="localisation" id="localisation" placeholder="Votre ville">
                 </label>
                 <button type="submit" id="btn-research">Rechercher 🔎</button>
-                <label id="grid-animaux-trouvés">101 animaux trouvés</label>
-                <label id="grid-réinitialisation">Réinitialiser les filtres</label>
+                <p id="grid-animaux-trouvés"></p>
+                <p id="grid-réinitialisation"><a href="adopt.html" >Réinitialiser les filtres</a></p>
             </form>
         </section>
     </main>
+
+        <footer>
+      <div id="wrapper">
+        <div id="brand">
+          <h3>ADAopte</h3>
+          <p id="ourMission">
+            Notre mission est de trouver des foyers aimants pour chaque animal
+            abandonné et de promouvoir le bien-être animal.
+          </p>
+          <div id="logosMedias"></div>
+        </div>
+        <div id="info">
+          <h3>Informations utilies</h3>
+
+          <ul>
+            FAQs
+          </ul>
+          <ul>
+            Conseils d'adoption
+          </ul>
+          <ul>
+            Nous contacter
+          </ul>
+          <ul>
+            Mentions légales
+          </ul>
+        </div>
+        <div id="contact">
+          <h3>Contacts</h3>
+          <address>
+            116 rue du Faubourg Saint-Martin 75010 Paris, France
+          </address>
+          <a href="mailto:contact@ADAopte.fr">contact@ADAopte.fr</a>
+          <a href="tel:+33 1 23 45 67 89">Tél +33 1 23 45 67 89</a>
+        </div>
+      </div>
+
+      <div id="licence">
+        <p>
+          2025 ADAopte. Tous droits réservés. Ce site a été développé dans le
+          cadre d'un projet pour ADA Tech School.
+        </p>
+      </div>
+    </footer>
 </body>
 
 </html>
