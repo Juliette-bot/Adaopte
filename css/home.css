@@ -9,6 +9,14 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-style: normal;
+    font-size: 4em;
+    color: #333333;
+    text-align: center;
+}
+
 h3 {
     font-family: "Amatic SC", sans-serif;
     font-style: normal;
@@ -17,9 +25,130 @@ h3 {
     text-align: left;
 }
 
+#howToSection {
+    background-color: white;
+}
+
+#cardsHtml {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+
+#cardSearch {
+    flex: 1 1 200px;
+    max-height: 300px;
+    max-width: 200px;
+    padding: 16px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+#cardForm {
+    flex: 1 1 200px;
+    max-height: 300px;
+    max-width: 200px;
+    padding: 16px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+#cardMeet {
+    flex: 1 1 200px;
+    max-height: 300px;
+    max-width: 200px;
+    padding: 16px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+#cardHome {
+    flex: 1 1 200px;
+    max-height: 300px;
+    max-width: 200px;
+    padding: 16px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#changeLifeSection {
+    width: 100%;
+    height: 30vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#changeLife {
+    padding: 0.5em;
+    margin: 0;
+}
+
+#mainText {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #484848;
+    font-size: 1rem;
+}
+
+#flexGap-1 {
+    display: flex;
+    justify-content: center;
+    padding: 4em;
+    gap: 1rem;
+}
+
+.btnAdopt {
+    text-decoration: none;
+    border-radius: 1.5rem;
+    border: 0;
+    padding: 0.8rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size: 0.9rem;
+    background-color: #333333;
+    color: white;
+}
+
+.btnDonation {
+    text-decoration: none;
+    border-radius: 1.5rem;
+    border: 0;
+    padding: 0.8rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size: 0.9rem;
+    background-color: var(--btn-secondary-bg);
+    color: white;
+}
+
+.btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.5rem;
+    border: 0;
+    padding: 0.8rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size: 0.9rem;
+    background-color: var(--btn-accent-bg);
+    color: white;
+}
+
 footer {
     background-color: #333333;
     padding: 1rem 0;
+    font-size: 1rem;
 }
 
 /*change la couleur des liens et retire le souligné*/
@@ -30,6 +159,7 @@ footer a {
 
 footer p {
     font-family: "Roboto", sans-serif;
+    text-align: left;
 }
 
 #wrapper {
@@ -82,21 +212,22 @@ footer p {
 }
 
 #gridPhotos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  gap : 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 15px;
 }
 
 .columns {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 .photos {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
- 
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+
 
 }
