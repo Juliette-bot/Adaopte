@@ -79,5 +79,25 @@
     "zipcode": "74400",
     "description": "Ruby est une boule de neige pleine d’amour ! Elle adore les promenades et les câlins par temps frais.",
     "imageUrl": "/assets/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
+  },
+  {
+    "name": "Raven",
+    "age": "2 ans",
+    "breed": "Chat noir",
+    "type": "Chat",
+    "city": "Lyon",
+    "zipcode": "69100",
+    "description": "Raven est un chat très énergique, qui adore être en hauteur et vous juger. Elle est également très caline, mais uniquement quand elle l'a décidé.",
+    "imageUrl": "/assets/raven.jpg"
+  },
+    {
+    "name": "Ragnar",
+    "age": "5 ans",
+    "breed": "Chat",
+    "type": "Chat",
+    "city": "Lyon",
+    "zipcode": "69100",
+    "description": "Ragnar est un gros patapouf qui adore les caresses et se faire brosse. Il est également très joueur",
+    "imageUrl": "/assets/ragnar.jpg"
   }
 ]
