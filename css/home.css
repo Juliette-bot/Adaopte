@@ -18,72 +18,165 @@ h2 {
 }
 
 h3 {
+    color: #333333;
+    font-family: var(--font-family-simple);
+    font-size: 1.5rem;
+}
+
+h4 {
     font-family: "Amatic SC", sans-serif;
     font-style: normal;
-    font-size: 2em;
+    font-size: 2rem;
     color: #FF6D39;
     text-align: left;
 }
 
 #howToSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh;
     background-color: white;
+    color: #666;
+    padding: 1em;
+
 }
 
-#cardsHtml {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 16px;
-}
-
-#cardSearch {
-    flex: 1 1 200px;
-    max-height: 300px;
-    max-width: 200px;
-    padding: 16px;
-    background: #f0f0f0;
-    border-radius: 8px;
+#howToDo {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    padding: 0.5em;
+    margin: 0;
+}
+
+#mainText {
+    max-width: 800px;
 
 }
 
-#cardForm {
-    flex: 1 1 200px;
-    max-height: 300px;
-    max-width: 200px;
-    padding: 16px;
-    background: #f0f0f0;
-    border-radius: 8px;
+.cardsHtml {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     text-align: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 15vw;
+    height: 30vh;
+    min-width: 250px;
+    background: white;
+    border: 0.25em #979797;
+    box-shadow: 0 4px 8px rgb(150, 151, 151);
+    border-radius: 20px;
+    padding: 1em;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgb(150, 151, 151);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cardsHtml {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card {
+        width: 80vw;
+    }
+}
+
+/*
+#howToSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    color: #666;
+    box-sizing: border-box;
 
 }
 
-#cardMeet {
-    flex: 1 1 200px;
-    max-height: 300px;
-    max-width: 200px;
-    padding: 16px;
-    background: #f0f0f0;
-    border-radius: 8px;
+#howToDo {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.cardsHtml {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
     text-align: center;
-
 }
 
-#cardHome {
-    flex: 1 1 200px;
-    max-height: 300px;
-    max-width: 200px;
-    padding: 16px;
-    background: #f0f0f0;
-    border-radius: 8px;
+
+.card article {
+    width: 10vw;
+    background: white;
+    border: 0.25em #979797;
+    box-shadow: 0 4px 8px rgb(150, 151, 151);
+    border-radius: 20px;
+    padding: 1em;
+
+    transition: transform 0.3s;
+}
+
+
+.card-item {
+    display: flex;
+    height: 100%;
+    padding: 2rem;
+    background: white;
+    border: 0.25em #979797;
+    box-shadow: 0 4px 8px rgb(150, 151, 151);
+    border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgb(150, 151, 151);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+    font-size: .9rem;
+}
+*/
 #changeLifeSection {
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -228,6 +321,4 @@ footer p {
     width: 100%;
     border-radius: 10px;
     display: block;
-
-
 }
