@@ -16,25 +16,27 @@ body {
   background-position: center;
   background-size: 100vw;
   background-repeat: no-repeat;
-  max-height: 380px;
+  height: 480px;
+
 }
 
 
 #titleXL {
   justify-items: center;
  font-family: "Amatic SC", sans-serif;
-  font-size: x-large;
+  font-size: 45px;
   color: white;
-  margin-bottom: 20px;
-  margin-top: 9.4vh;
+  margin-top: 12.5vh;
 
 }
 #title-text {
   color: white;
-  font-size: small;
+  font-size: 19px;
    font-family: "Roboto", sans-serif;
    text-align: center;
-   max-width: 500px;
+   max-width: 700px;
+   margin-top: -25px;
+   line-height: 35px;
 }
 
 #mainText {
@@ -52,20 +54,23 @@ max-width: 500px;
 
 }
 .research-home {
- transform: translate(100px, 87px);
+ transform: translate(100px, 100px);
  background-color: rgb(255, 255, 255);
  border-radius: 10px;
  height: 7.5vh;
  margin-left: -13.2vw;
 }
 
+#adoptSection {
+background-color: #f8f4f4;
+
+}
 #textToAdopt {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   margin-top: 14vh;
-  margin-bottom: 10vh;
   font-family: "Amatic SC", sans-serif;
   font-size: 2em;
 }
@@ -142,22 +147,57 @@ footer p {
 }
 
 #gridPhotos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  gap: 15px;
-  margin: 50px;
+ 
+  display: flex;
+  justify-content: center;
 }
 
-.columns {
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  height: 1100px;
+  width: 100%;
+  margin: 60px;
+}
+
+.grid-column {
   display: flex;
   flex-direction: column;
-  gap: 15px;
- 
+  gap: 1rem;
 }
-.photos {
-  width: 100%;
+
+.grid-column > .img-big {
+  flex: 2;
   border-radius: 10px;
-  display: block;
-  max-height: 400px;
+}
+
+.grid-column > .img-small {
+  flex: 1;
+  border-radius: 10px;
+}
+
+#seeAnimals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+ 
+
+}
+
+#animalsLink {
+   
+    border-radius: 1.5rem;
+    border: 0;
+    padding: 0.8rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+     text-decoration: none;
+    background-color: black;
+    margin-bottom: 8vh;
+
 }

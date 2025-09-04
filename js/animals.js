@@ -1,26 +1,18 @@
 async function displayPhotosHome() {
   const response = await fetch("/assets/animals.json");
   const animals = await response.json();
-  const columns = [
-    document.getElementById('column1'),
-    document.getElementById('column2'),
-    document.getElementById('column3'),
-    document.getElementById('column4')
-  ]
+  const imageDivs = document.querySelectorAll("#gridPhotos .img");
+  
+  
   
   
 
   animals.forEach((animal, index) => {
-    const card = document.createElement("div");
-    card.id = `photos${index + 1}`;
-
-    const img = document.createElement("img");
-    img.src = animal.imageUrl;
-    img.alt = animal.name;
-    img.classList.add("photos");
-    card.appendChild(img);
-     const columnIndex =  Math.floor(index / 2);
-     columns[columnIndex].appendChild(card);
+    const div = imageDivs[index];
+    div.style.backgroundImage = `url(${animal.imageUrl})`;
+     div.style.backgroundSize = "cover";
+    div.style.backgroundPosition = "center";
+    div.style.backgroundRepeat = "no-repeat";
   });
 }
 displayPhotosHome();

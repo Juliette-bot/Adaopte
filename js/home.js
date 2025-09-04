@@ -1,0 +1,1 @@
+const seeAnimals = document.getElementById('animalsLink')
