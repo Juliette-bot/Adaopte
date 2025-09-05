@@ -171,25 +171,60 @@ footer p {
   gap: 1rem;
   min-height: 100%;
 }
-@media (max-width: 425px) {
-  .grid-container {
-    grid-template-columns: 1fr; 
-   
-     max-width: 300px;
+@media  (min-width: 320px) and (max-width: 424px) {
+    #container-research-adopt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+     .grid-container {
+    grid-template-columns: 2fr; 
+    max-width: 500px;
     margin: 0px;
     gap : 1rem;
     
+    
      }
-   .grid-column {
-    min-height: 400px;
-  }
+
+
+
+    .grid-column {
+        min-height: 400px;
+    }
+
     .research-home {
-    transform: none;
-    margin: 1rem auto;
-  }
+        transform: none;
+        margin: 1rem auto;
+        width: 90%;
+        height: auto;
+    }
+    #textToAdopt {
+   font-size: 1.5em;     
+    text-align: center;   
+    max-width: 90%;
+    margin: 0 auto; 
+    margin-top: 30px;          
+    margin-bottom: 30px;
+}
+ #titleXL {
+  margin-top: 140px;
+  font-size: 30px;
+  align-items: center;
+ }
+ #title-text {
+font-size: 10px;
+ }
+
+ #gridPhotos {
+margin-top: 80px;
+
+ }
 }
 
-@media (max-width: 768px) {
+@media  (min-width: 425px) and (max-width: 1023px) {
    body {
     font-size: 14px;
   }
