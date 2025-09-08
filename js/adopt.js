@@ -11,7 +11,7 @@ const reasearchQuery = localStorage.getItem('quantityAnimalsFind')
 if (reasearchQuery !== null) {
     const found = (reasearchQuery)
     const inputTypeAnimals = document.getElementById('grid-animaux-trouvés')
-    inputTypeAnimals.innerText = `${found} animal${found > 1 ? 's' : ''} trouvé${found > 1 ? 's' : ''}`
+    inputTypeAnimals.innerText = `${found} animal trouvé`
 
     
     
