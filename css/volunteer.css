@@ -28,6 +28,7 @@ body {
 label {
     display: block;
     font-family: "Roboto", sans-serif;
+    width: 100vw;
 }
 
 #email {
@@ -51,4 +52,9 @@ textarea {
     height:20vh;
     width: 20vw;;
     font-family: "Roboto", sans-serif;
+}
+
+input {
+    width: 100%;
+    height: 60%;
 }
