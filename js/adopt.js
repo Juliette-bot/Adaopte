@@ -43,7 +43,7 @@ if (filteredAnimalsData) {
     localStorage.removeItem('filteredAnimals')
     localStorage.removeItem('quantityAnimalsFind')
 }
-/*
+
 async function displayPhotosAdopt() {
   const response = await fetch("/assets/animals.json");
   const animals = await response.json();
@@ -54,7 +54,7 @@ async function displayPhotosAdopt() {
     const flex = document.getElementById('flex-card-adoption')
 
  const card = document.createElement("div");
-    card.classList.add("card")
+    card.classList.add("cardAdopt")
     flex.appendChild(card)
 
 
@@ -115,7 +115,7 @@ async function displayPhotosAdopt() {
 }
   
 displayPhotosAdopt();
-*/
+
 
 
 const btnResearch = document.getElementById('btn-research')
