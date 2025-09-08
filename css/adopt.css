@@ -128,7 +128,7 @@ input{
     margin: 0 auto; 
 }
 
-.card {
+.cardAdopt {
     flex: 1 1 calc(25% - 2em); 
     max-width: 300px; 
     min-width: 250px; 
@@ -139,13 +139,13 @@ input{
     flex-direction: column;
 }
 
-.cardPhoto {
+.cardPhotoAdopt {
     width: 100%;
     height: 18vh;
     object-fit: cover;
 }
 
-.cardText {
+.cardTextAdopt {
     padding: 1rem;
     font-family: "Roboto", sans-serif;
     display: flex;
@@ -154,18 +154,18 @@ input{
     flex: 1;
 }
 
-.name {
+.nameAdopt {
     margin: 0;
     padding-top: 0.2rem;
     padding-bottom: 0.5rem;
     color: #8584ff;
 }
 
-.textCard {
+.textCardAdopt {
     margin: 0;
 }
 
-.divMeet {
+.divMeetAdopt {
     display: flex;
     justify-content: center;
     align-items: baseline;
