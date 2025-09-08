@@ -1,6 +1,3 @@
-
-
-
 const btnResearch = document.getElementById('btn-research')
 
 btnResearch.addEventListener('click', async (e) => {
@@ -20,9 +17,9 @@ btnResearch.addEventListener('click', async (e) => {
     localStorage.setItem('filteredAnimals', JSON.stringify(filteredAnimals))
     localStorage.setItem('quantityAnimalsFind', quantityTypeAnimalsFind)
     if (quantityTypeAnimalsFind > 1){
-        window.location.href = `/home/adopt.html?found=${quantityTypeAnimalsFind}`; 
+        window.location.href = `/home/adopt.html?found=${quantityTypeAnimalsFind}`
     } else {
-       window.location.href = `/home/adopt.html?found=${quantityTypeAnimalsFind}`;  
+       window.location.href = `/home/adopt.html?found=${quantityTypeAnimalsFind}`
     }
     
 })
