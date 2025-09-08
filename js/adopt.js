@@ -6,7 +6,8 @@ burgerBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active')
 })
 
-
+// Fonction permettant de créer des cards, chaque card représente un animal avec sa photo et ses photos. Les informations 
+// sont récupérés grâce à un tableau (animals)
 function displayPhotosAdopt(animals) {
 
     animals.forEach((animal) => {
@@ -56,22 +57,19 @@ function displayPhotosAdopt(animals) {
         meet.innerText = "Rencontrer"
         meet.classList.add("btnMeetAdopt")
 
-
         cardText.appendChild(type)
         cardText.appendChild(h2)
         cardText.appendChild(age)
         cardText.appendChild(city)
         cardText.appendChild(description)
-
         divMeet.appendChild(meet)
 
     })
 }
 
-
-async function startingAdoptPage(){
+// Fonction permettant de gérer plusieurs cas d'affichage des cards des animaux au chargement de la page Adopt
+async function startingAdoptPage() {
     let reasearchQuery = localStorage.getItem('quantityAnimalsFind')
-
 
     if (reasearchQuery > 0) {
         let found = (reasearchQuery)
@@ -87,35 +85,34 @@ async function startingAdoptPage(){
         inputTypeAnimals.innerText = `${found} animal trouvé`
         let response = await fetch("/assets/animals.json");
         let animals = await response.json();
-        displayPhotosAdopt (animals)
+        displayPhotosAdopt(animals)
 
     } else {
-        let response = await fetch("/assets/animals.json");
-        let animals = await response.json();
-        displayPhotosAdopt (animals)
+        let animals = await animalsResearch()
+        displayPhotosAdopt(animals)
     }
 
     localStorage.removeItem('filteredAnimals')
     localStorage.removeItem('quantityAnimalsFind')
 }
 
-
+// Fonction permettant de récupérer les données des animaux
 async function animalsResearch() {
     const response = await fetch('../assets/animals.json')
     const listAnimals = await response.json()
     return listAnimals
 }
 
+// Fonction permettant de récupérer le type d'animal choisi dans la liste déroulante de la section "recherche"
 function choice_select() {
     const select = document.getElementById('select-adopt')
     const choice = select.selectedIndex
     const choice_selected = select.options[choice].value
     return choice_selected
-
 }
 
-const btnResearch = document.getElementById('btn-research')
 
+const btnResearch = document.getElementById('btn-research')
 btnResearch.addEventListener('click', async (e) => {
     let flex = document.getElementById('flex-card-adoption')
     flex.innerText = ""
@@ -125,20 +122,30 @@ btnResearch.addEventListener('click', async (e) => {
     const inputTypeAnimals = document.getElementById('grid-animaux-trouves')
 
     let typeAnimals = choice_select()
-    let cityValue = city.value
-
-    let listAnimals = await animalsResearch()
-    let filteredAnimals = listAnimals.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
-
-    let quantityTypeAnimalsFind = filteredAnimals.length
-    if (quantityTypeAnimalsFind > 1) {
-        inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animaux trouvés`
-    } else {
-        inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animal trouvé`
-    }
+    let cityRaw = city.value
     
-    displayPhotosAdopt(filteredAnimals)
+    if (typeAnimals == "") {
+        inputTypeAnimals.innerText = "Merci de choisir une ville"
+    } else if ((cityRaw == "")) {
+        inputTypeAnimals.innerText = "Merci de choisir un type d'animal"
+    } else {
+        let cityValue = cityRaw[0].toUpperCase() + cityRaw.slice(1)
+        let listAnimals = await animalsResearch()
+        let filteredAnimals = listAnimals.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
+        let quantityTypeAnimalsFind = filteredAnimals.length
+
+        if (quantityTypeAnimalsFind > 1) {
+            inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animaux trouvés`
+        } else {
+            inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animal trouvé`
+        }
+
+        displayPhotosAdopt(filteredAnimals)
+    }
+
+
 })
 
-
 startingAdoptPage()
+
+export {choice_select, animalsResearch}
