@@ -5,14 +5,14 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 12px;
+
     margin: 0;
 }
 
 h2 {
     font-family: "Amatic SC", sans-serif;
     font-style: normal;
-    font-size: 4em;
+    font-size: clamp(2rem, 5vw, 4rem);
     color: #333333;
     text-align: center;
 }
@@ -21,16 +21,18 @@ h3 {
     color: #333333;
     font-family: var(--font-family-simple);
     font-size: 1.5rem;
+
 }
 
 h4 {
     font-family: "Amatic SC", sans-serif;
     font-style: normal;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #FF6D39;
     text-align: left;
 }
 
+/*SECTION HOW TO*/
 #howToSection {
     display: flex;
     flex-direction: column;
@@ -53,133 +55,67 @@ h4 {
 
 #mainText {
     max-width: 800px;
-
 }
 
 .cardsHtml {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    text-align: center;
+    gap: 20px;
     flex-wrap: wrap;
+    padding: 1rem;
 }
 
 .card {
     width: 15vw;
-    height: 30vh;
+    height: 35vh;
     min-width: 250px;
     background: white;
-    border: 0.25em #979797;
-    box-shadow: 0 4px 8px rgb(150, 151, 151);
-    border-radius: 20px;
+    border: 0.1em #979797;
+    box-shadow: 0 3px 6px rgb(150, 151, 151);
+    border-radius: 15px;
     padding: 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
     transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgb(150, 151, 151);
+    box-shadow: 0 3px 6px rgb(150, 151, 151);
 }
 
 .card h3 {
-    margin-top: 0;
+    text-align: center;
+    margin: 0.5em auto;
+    padding: 0 10%;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .card p {
-    color: #666;
-    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1em 5%;
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
 }
 
 .card img {
     width: 50px;
     height: 50px;
-    margin-bottom: 1em;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .cardsHtml {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .card {
-        width: 80vw;
-    }
-}
-
-/*
-#howToSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 80vh;
-    background-color: white;
-    color: #666;
-    box-sizing: border-box;
-
-}
-
-#howToDo {
-    display: flex;
-    justify-content: center;
-    padding: 0.5em;
-    margin: 0;
-}
-
-.cardsHtml {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    text-align: center;
+    margin: 1em auto;
+    display: block;
 }
 
 
-.card article {
-    width: 10vw;
-    background: white;
-    border: 0.25em #979797;
-    box-shadow: 0 4px 8px rgb(150, 151, 151);
-    border-radius: 20px;
-    padding: 1em;
-
-    transition: transform 0.3s;
-}
 
 
-.card-item {
-    display: flex;
-    height: 100%;
-    padding: 2rem;
-    background: white;
-    border: 0.25em #979797;
-    box-shadow: 0 4px 8px rgb(150, 151, 151);
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgb(150, 151, 151);
-}
-
-.card h3 {
-    margin-top: 0;
-}
-
-.card p {
-    color: #666;
-    font-size: .9rem;
-}
-*/
+/* SECTION CHANGE LIFE */
 #changeLifeSection {
     width: 100%;
-    height: 40vh;
+    min-height: 40vh;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem 1rem;
 }
 
 #changeLife {
@@ -188,7 +124,7 @@ h4 {
 }
 
 #mainText {
-    max-width: 700px;
+    max-width: 90%;
     margin: 0 auto;
     text-align: center;
     color: #484848;
@@ -198,53 +134,71 @@ h4 {
 #flexGap-1 {
     display: flex;
     justify-content: center;
-    padding: 4em;
+    padding: 2rem 1rem;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.btnAdopt {
-    text-decoration: none;
-    border-radius: 1.5rem;
-    border: 0;
-    padding: 0.8rem;
-    font-family: var(--font-family-simple);
-    font-weight: 800;
-    font-size: 0.9rem;
-    background-color: #333333;
-    color: white;
-}
-
-.btnDonation {
-    text-decoration: none;
-    border-radius: 1.5rem;
-    border: 0;
-    padding: 0.8rem;
-    font-family: var(--font-family-simple);
-    font-weight: 800;
-    font-size: 0.9rem;
-    background-color: var(--btn-secondary-bg);
-    color: white;
-}
-
+.btnAdopt,
+.btnDonation,
 .btnVolonteer {
     text-decoration: none;
     border-radius: 1.5rem;
     border: 0;
-    padding: 0.8rem;
+    padding: 1rem 1.5rem;
     font-family: var(--font-family-simple);
     font-weight: 800;
     font-size: 0.9rem;
-    background-color: var(--btn-accent-bg);
     color: white;
+    flex: 1 1 auto;
+    max-width: 200px;
+    text-align: center;
 }
 
+.btnAdopt {
+    background-color: #333333;
+}
+
+.btnDonation {
+    background-color: var(--btn-secondary-bg);
+}
+
+.btnVolonteer {
+    background-color: var(--btn-accent-bg);
+}
+
+/* Écrans larges */
+@media (min-width: 1024px) {
+    .card {
+        max-width: 350px;
+        min-height: 350px;
+    }
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card {
+        max-width: 300px;
+        min-height: 320px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .card {
+        width: 95%;
+        min-height: 250px;
+        margin: 0.5em auto;
+    }
+}
+
+/* FOOTER */
 footer {
     background-color: #333333;
     padding: 1rem 0;
     font-size: 1rem;
 }
 
-/*change la couleur des liens et retire le souligné*/
 footer a {
     color: white;
     text-decoration: none;
@@ -257,12 +211,13 @@ footer p {
 
 #wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    gap: 1.5rem;
 }
 
 #item {
-    max-width: 400px;
-    max-height: 50px;
+    max-width: 100%;
     text-align: center;
 }
 
@@ -274,15 +229,16 @@ footer p {
 
 #logosMedias {
     display: flex;
-    gap: .25rem;
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 .footer-icon {
     background-color: #484848;
     border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    padding: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,6 +246,7 @@ footer p {
 
 #info ul {
     padding: 0;
+    list-style: none;
 }
 
 #contact {
@@ -304,6 +261,50 @@ footer p {
     text-align: center;
 }
 
+/* Media Queries */
+@media (min-width: 768px) {
+    .footer {
+        width: 100%;
+    }
+
+    #mainText {
+        max-width: 700px;
+        font-size: 1.1rem;
+    }
+
+    #flexGap-1 {
+        padding: 3rem 1rem;
+    }
+
+    #wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #item,
+    #brand {
+        max-width: 400px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        width: 100%;
+    }
+
+    .btnAdopt,
+    .btnDonation,
+    .btnVolonteer {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.8rem;
+        max-width: 150px;
+    }
+}
+
+
+
+/* PHOTOS ACCUEIL*/
 #gridPhotos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
