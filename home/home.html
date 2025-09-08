@@ -10,9 +10,12 @@
     href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <script type="module" src="../js/animals.js"></script>
+  <script type="module" src="../js/home.js"></script>
+  <script type="module" src="../js/adopt.js"></script>
   <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/adopt.css">
+
   <script type="module" src="../js/animals.js"></script>
   <title>ADAopte</title>
 </head>
@@ -133,6 +136,7 @@
         </p>
       </div>
       <div id="gridPhotos">
+
          <div class="grid-container">
     
     <div class="grid-column">
@@ -162,28 +166,58 @@
     </section>
 
     <section id="howToSection">
-      <div id="textExplication">
-        <h2 id="howToDo">Comment ça marche ?</h2>
-        <p id="mainText">
-          Adopter un animal est un engagement sérieux et à long terme. Voici
-          notre processus d'adoption en quelques étapes simples.
-        </p>
+      <h2 id="howToDo">Comment ça marche ?</h2>
+      <p id="mainText">
+        Adopter un animal est un engagement sérieux et à long terme. Voici
+        notre processus d'adoption en quelques étapes simples.
+      </p>
+
+      <div class="cardsHtml">
+        <article class="card">
+          <img src="../assets/magnifyingglass.ico" alt="icône loupe">
+          <h3>1. Trouvez votre compagnon</h3>
+          <p>Parcourez notre base de données d'animaux disponibles et utilisez nos filtres pour trouver celui qui
+            correspond à votre mode de vie.</p>
+        </article>
+
+
+        <article class="card">
+          <img src="../assets/clipboard.ico" alt="icône formulaire">
+          <h3>2. Remplissez une demande</h3>
+          <p>Soumettez votre formulaire d'adoption pour l'animal qui vous intéresse. Nous examinons chaque demande
+            avec soin.</p>
+        </article>
+
+        <article class="card">
+          <img src="../assets/hand.ico" alt="îcone coucou">
+          <h3>3. Rencontrez l'animal</h3>
+          <p>Visitez le refuge pour rencontrer l'animal et voir si vous êtes compatibles. C'est une étape
+            essentielle du processus.</p>
+        </article>
+
+        <article class="card">
+          <img src="../assets/house.ico" alt="îcone maison">
+          <h3>4. Bienvenue à la maison</h3>
+          <p>Une fois votre demande approuvée, vous pouvez accueillir votre nouvel ami chez vous. Nous restons
+            disponibles pour vous conseiller.</p>
+        </article>
       </div>
-      <div id="cards"></div>
+
+
     </section>
     <section id="changeLifeSection">
-      <div id="textChangeLife">
-        <h2 id="changeLife">Prêt⸱e à changer une vie ?</h2>
-        <p id="mainText">
-          Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez
-          votre foyer ou votre coeur, vous pouvez offrir une seconde chance à
-          un animal abandonné.
-        </p>
-      </div>
-      <div id="flex gap-1">
-        <a href="adopt.html">Adopter un animal</a>
-        <a href="https://donation.ADAopte.fr">Faire un don</a>
-        <a href="volunteer.html">Devenir bénévole</a>
+
+      <h2 id="changeLife">Prêt⸱e à changer une vie ?</h2>
+      <p id="mainText">
+        Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez
+        votre foyer ou votre coeur, vous pouvez offrir une seconde chance à
+        un animal abandonné.
+      </p>
+
+      <div id="flexGap-1">
+        <a class="btnAdopt" href="adopt.html">Adopter un animal</a>
+        <a class="btnDonation" href="https://donation.ADAopte.fr">Faire un don 🫶</a>
+        <a class="btnVolonteer" href="volunteer.html">Devenir bénévole</a>
       </div>
     </section>
   </main>
@@ -191,7 +225,7 @@
   <footer>
     <div id="wrapper">
       <div id="brand">
-        <h3>ADAopte</h3>
+        <h4>ADAopte</h4>
         <p id="ourMission">
           Notre mission est de trouver des foyers aimants pour <br>
           chaque animal abandonné et de promouvoir le bien-être <br>
@@ -233,7 +267,9 @@
         </div>
       </div>
       <div id="info">
-        <h3>Informations utiles</h3>
+
+        <h4>Informations utilies</h4>
+
 
         <ul>
           FAQs
@@ -249,7 +285,7 @@
         </ul>
       </div>
       <div id="contact">
-        <h3>Contacts</h3>
+        <h4>Contacts</h4>
         <address>
           116 rue du Faubourg Saint-Martin <br>
           75010 Paris, France
