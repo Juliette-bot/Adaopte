@@ -8,14 +8,13 @@ body {
 
   margin: 0;
 }
+
 #researchSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(
-      rgba(230, 230, 230, 0.1),
-      rgba(0, 0, 0, 0.8)
-    ),
+  background-image: linear-gradient(rgba(230, 230, 230, 0.1),
+      rgba(0, 0, 0, 0.8)),
     url("../assets/background.jpg");
   background-position: center;
   background-size: cover;
@@ -279,7 +278,6 @@ footer p {
 #wrapper {
   display: flex;
   flex-direction: row;
-  flex-direction: row;
   gap: 1.5rem;
 }
 
@@ -291,13 +289,9 @@ footer p {
 #brand,
 #info,
 #contact {
-#info,
-#contact {
   color: white;
   text-align: left;
-  flex:1;
-  margin: 0 5%;
-  flex:1;
+  flex: 1;
   margin: 0 5%;
 }
 
@@ -334,7 +328,7 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
-@media (max-width: 768px) {
+
   .footer {
     width: 100%;
   }
@@ -352,9 +346,6 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   #brand {
@@ -367,15 +358,17 @@ footer p {
   #brand,
   #info,
   #contact {
-  color: white;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 
   h4 {
     justify-self: center;
-}
+  }
+
+  #brand {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -385,15 +378,11 @@ footer p {
   #brand,
   #info,
   #contact {
-  color: white;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-  h4 {
-    justify-self: center;
-}
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 
   .research-home {
     display: flex;
@@ -408,19 +397,18 @@ footer p {
 }
 
 /* media query pour ECRAN 4K */
-@media (min-width: 2559px)  {
+@media (min-width: 2560px) {
 
-/* CHANGE LIFE SECTION */
+  /* CHANGE LIFE SECTION */
 
-#changeLifeSection {
-  h2 {
-    font-size: 5.5rem;
+  #changeLifeSection h2 {
+      font-size: 5.5rem;
   }
 
-  p {
-    font-size: 2rem;
-  }
-}
+  #changeLifeSection p {
+      font-size: 2rem;
+    }
+  
 
   .btnAdopt,
   .btnDonation,
@@ -431,7 +419,7 @@ footer p {
     padding: 1rem 1.5rem;
     font-family: var(--font-family-simple);
     font-weight: 800;
-    font-size:1.8rem;
+    font-size: 1.8rem;
     color: white;
     flex: 1 1 auto;
     max-width: 50%;
@@ -439,13 +427,14 @@ footer p {
   }
 
 
-/* FOOTER */
+  /* FOOTER */
 
   footer {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
   }
+
   footer a {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
   }
 
   h4 {
@@ -453,97 +442,6 @@ footer p {
   }
 }
 
-/* media query pour ECRAN 4K */
-@media (min-width: 2559px)  {
-
-/* CHANGE LIFE SECTION */
-
-#changeLifeSection {
-  h2 {
-    font-size: 5.5rem;
-  }
-
-  p {
-    font-size: 2rem;
-  }
-}
-
-  .btnAdopt,
-  .btnDonation,
-  .btnVolonteer {
-    text-decoration: none;
-    border-radius: 1.8rem;
-    border: 0;
-    padding: 1rem 1.5rem;
-    font-family: var(--font-family-simple);
-    font-weight: 800;
-    font-size:1.8rem;
-    color: white;
-    flex: 1 1 auto;
-    max-width: 50%;
-    text-align: center;
-  }
-
-
-/* FOOTER */
-
-  footer {
-    font-size: 1.7rem; 
-  }
-  footer a {
-    font-size: 1.7rem; 
-  }
-
-  h4 {
-    font-size: 2.7rem;
-  }
-}
-
-/* media query pour ECRAN 4K */
-@media (min-width: 2559px)  {
-
-/* CHANGE LIFE SECTION */
-
-#changeLifeSection {
-  h2 {
-    font-size: 5.5rem;
-  }
-
-  p {
-    font-size: 2rem;
-  }
-}
-
-  .btnAdopt,
-  .btnDonation,
-  .btnVolonteer {
-    text-decoration: none;
-    border-radius: 1.8rem;
-    border: 0;
-    padding: 1rem 1.5rem;
-    font-family: var(--font-family-simple);
-    font-weight: 800;
-    font-size:1.8rem;
-    color: white;
-    flex: 1 1 auto;
-    max-width: 50%;
-    text-align: center;
-  }
-
-
-/* FOOTER */
-
-  footer {
-    font-size: 1.7rem; 
-  }
-  footer a {
-    font-size: 1.7rem; 
-  }
-
-  h4 {
-    font-size: 2.7rem;
-  }
-}
 
 @media (max-width: 480px) {
   .footer {
@@ -586,6 +484,7 @@ footer p {
   gap: 1rem;
   min-height: 100%;
 }
+
 @media (min-width: 320px) and (max-width: 425px) {
   #container-research-adopt {
     display: flex;
@@ -593,7 +492,7 @@ footer p {
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
-    
+
   }
 
   .grid-container {
@@ -613,6 +512,7 @@ footer p {
     width: 90%;
     height: auto;
   }
+
   #textToAdopt {
     font-size: 1.5em;
     text-align: center;
@@ -620,22 +520,24 @@ footer p {
     margin: 0 auto;
     margin-top: 218px;
   }
+
   #titleXL {
     margin-top: 140px;
     font-size: 1.87em;
     align-items: center;
   }
+
   #title-text {
     font-size: 0.62em;
   }
 
-   #gridPhotos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-      align-items: center;
-      margin-top: 80px;
-}
+  #gridPhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 80px;
+  }
 
   #seeAnimals {
     display: flex;
@@ -647,7 +549,7 @@ footer p {
   body {
     font-size: 14px;
   }
-  
+
 
   #title-text,
   #mainText {
@@ -657,19 +559,21 @@ footer p {
 
   #textToAdopt {
     font-size: 2.5em;
-    margin-top : 410px; 
+    margin-top: 410px;
   }
 
   h3 {
     font-size: 1.5em;
     text-align: center;
   }
+
   #gridPhotos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-      align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
   .grid-container {
     grid-template-columns: 2fr;
     max-width: 500px;
@@ -682,6 +586,7 @@ footer p {
   .grid-column {
     min-height: 500px;
   }
+
   .research-home {
     transform: none;
     margin: 1rem auto;
@@ -696,14 +601,14 @@ footer p {
 }
 
 @media (min-width: 1441px) {
-  
-#container-research-adopt {
-  margin-top: -35px !important;
-}
+
+  #container-research-adopt {
+    margin-top: -35px !important;
+  }
 
 }
 
-.grid-column > .img-big {
+.grid-column>.img-big {
   flex: 2;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(197, 195, 195, 0.5);
@@ -711,7 +616,7 @@ footer p {
   width: 100%;
 }
 
-.grid-column > .img-small {
+.grid-column>.img-small {
   flex: 1;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(82, 82, 82, 0.5);
@@ -737,5 +642,4 @@ footer p {
   text-decoration: none;
   background-color: black;
   margin-bottom: 8vh;
-}
 }
