@@ -99,5 +99,15 @@
     "zipcode": "69100",
     "description": "Ragnar est un gros patapouf qui adore les caresses et se faire brosse. Il est également très joueur",
     "imageUrl": "/assets/ragnar.jpg"
+  },
+  {
+    "name": "Miette",
+    "age": "7 ans",
+    "breed": "Chat",
+    "type": "Chat",
+    "city": "Lyon",
+    "zipcode": "69007",
+    "description": "Du haut de ses minis pattes, Miette vous jugera dans un premier temps, puis ne vous lâchera plus de la journée. Succombez à ses grands yeux ronds qui crient amour !",
+    "imageUrl": "/assets/Miette.jpg"
   }
 ]
