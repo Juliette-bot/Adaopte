@@ -82,6 +82,7 @@ h4 {
   margin: 0 auto;
 }
 
+
 .research-home {
   transform: translate(100px, 100px);
   background-color: rgb(255, 255, 255);
@@ -265,16 +266,19 @@ footer a {
   color: white;
   text-decoration: none;
   gap: 1rem;
+  gap: 1rem;
 }
 
 footer p {
   font-family: "Roboto", sans-serif;
   text-align: left;
   align-items: center;
+  align-items: center;
 }
 
 #wrapper {
   display: flex;
+  flex-direction: row;
   flex-direction: row;
   gap: 1.5rem;
 }
@@ -287,8 +291,12 @@ footer p {
 #brand,
 #info,
 #contact {
+#info,
+#contact {
   color: white;
   text-align: left;
+  flex:1;
+  margin: 0 5%;
   flex:1;
   margin: 0 5%;
 }
@@ -326,6 +334,7 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     width: 100%;
   }
@@ -343,9 +352,30 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   #brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #brand,
+  #info,
+  #contact {
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+  h4 {
+    justify-self: center;
+}
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -374,6 +404,98 @@ footer p {
     font-size: 0.8rem;
     transform: none;
     height: auto;
+  }
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2559px)  {
+
+/* CHANGE LIFE SECTION */
+
+#changeLifeSection {
+  h2 {
+    font-size: 5.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size:1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+
+/* FOOTER */
+
+  footer {
+    font-size: 1.7rem; 
+  }
+  footer a {
+    font-size: 1.7rem; 
+  }
+
+  h4 {
+    font-size: 2.7rem;
+  }
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2559px)  {
+
+/* CHANGE LIFE SECTION */
+
+#changeLifeSection {
+  h2 {
+    font-size: 5.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size:1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+
+/* FOOTER */
+
+  footer {
+    font-size: 1.7rem; 
+  }
+  footer a {
+    font-size: 1.7rem; 
+  }
+
+  h4 {
+    font-size: 2.7rem;
   }
 }
 
@@ -527,7 +649,7 @@ footer p {
   }
   
 
-
+  #title-text,
   #mainText {
     padding: 0 1rem;
     font-size: 1em;
