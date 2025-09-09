@@ -81,6 +81,8 @@ h4 {
   max-width: 500px;
   margin: 0 auto;
 }
+
+
 .research-home {
   transform: translate(100px, 100px);
   background-color: rgb(255, 255, 255);
@@ -263,17 +265,21 @@ footer {
 footer a {
   color: white;
   text-decoration: none;
+  gap: 1rem;
+  gap: 1rem;
 }
 
 footer p {
   font-family: "Roboto", sans-serif;
   text-align: left;
+  align-items: center;
+  align-items: center;
 }
 
 #wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  flex-direction: row;
   gap: 1.5rem;
 }
 
@@ -283,9 +289,16 @@ footer p {
 }
 
 #brand,
-#info {
+#info,
+#contact {
+#info,
+#contact {
   color: white;
   text-align: left;
+  flex:1;
+  margin: 0 5%;
+  flex:1;
+  margin: 0 5%;
 }
 
 #logosMedias {
@@ -310,9 +323,6 @@ footer p {
   list-style: none;
 }
 
-#contact {
-  color: white;
-}
 
 #licence {
   color: #979797;
@@ -323,7 +333,8 @@ footer p {
 }
 
 /* Media Queries */
-@media (min-width: 425px) and (max-width: 1023px) {
+@media (max-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     width: 100%;
   }
@@ -338,15 +349,51 @@ footer p {
   }
 
   #wrapper {
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  #item,
   #brand {
-    max-width: 400px;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
+  #brand,
+  #info,
+  #contact {
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+  h4 {
+    justify-self: center;
+}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #brand,
+  #info,
+  #contact {
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+  h4 {
+    justify-self: center;
+}
 
   .research-home {
     display: flex;
@@ -357,6 +404,144 @@ footer p {
     font-size: 0.8rem;
     transform: none;
     height: auto;
+  }
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2559px)  {
+
+/* CHANGE LIFE SECTION */
+
+#changeLifeSection {
+  h2 {
+    font-size: 5.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size:1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+
+/* FOOTER */
+
+  footer {
+    font-size: 1.7rem; 
+  }
+  footer a {
+    font-size: 1.7rem; 
+  }
+
+  h4 {
+    font-size: 2.7rem;
+  }
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2559px)  {
+
+/* CHANGE LIFE SECTION */
+
+#changeLifeSection {
+  h2 {
+    font-size: 5.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size:1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+
+/* FOOTER */
+
+  footer {
+    font-size: 1.7rem; 
+  }
+  footer a {
+    font-size: 1.7rem; 
+  }
+
+  h4 {
+    font-size: 2.7rem;
+  }
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2559px)  {
+
+/* CHANGE LIFE SECTION */
+
+#changeLifeSection {
+  h2 {
+    font-size: 5.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size:1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+
+/* FOOTER */
+
+  footer {
+    font-size: 1.7rem; 
+  }
+  footer a {
+    font-size: 1.7rem; 
+  }
+
+  h4 {
+    font-size: 2.7rem;
   }
 }
 
@@ -462,8 +647,9 @@ footer p {
   body {
     font-size: 14px;
   }
+  
 
-
+  #title-text,
   #mainText {
     padding: 0 1rem;
     font-size: 1em;
@@ -502,16 +688,7 @@ footer p {
 
     height: auto;
   }
-  #wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
 
-  #item {
-    max-width: 100%;
-    text-align: center;
-  }
   #seeAnimals {
     display: flex;
     margin-top: 970px;
@@ -560,4 +737,5 @@ footer p {
   text-decoration: none;
   background-color: black;
   margin-bottom: 8vh;
+}
 }
