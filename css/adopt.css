@@ -141,7 +141,7 @@ input{
 
 .cardPhotoAdopt {
     width: 100%;
-    height: 200px; /* fixe en px pour garder une image visible */
+    height: 200px; 
     object-fit: cover;
 }
 
@@ -154,6 +154,7 @@ input{
 }
 
 .nameAdopt {
+    position: lef;
     margin: 0;
     padding-top: 0.2rem;
     padding-bottom: 0.5rem;
@@ -199,4 +200,5 @@ input{
         height: 180px; 
     }
 }
+
 

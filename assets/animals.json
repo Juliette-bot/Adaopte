@@ -1,4 +1,3 @@
-
 [
   {
     "name": "Charlie",
@@ -90,7 +89,7 @@
     "description": "Raven est un chat très énergique, qui adore être en hauteur et vous juger. Elle est également très caline, mais uniquement quand elle l'a décidé.",
     "imageUrl": "/assets/raven.jpg"
   },
-    {
+  {
     "name": "Ragnar",
     "age": "5 ans",
     "breed": "Chat",
@@ -99,5 +98,16 @@
     "zipcode": "69100",
     "description": "Ragnar est un gros patapouf qui adore les caresses et se faire brosse. Il est également très joueur",
     "imageUrl": "/assets/ragnar.jpg"
+  },
+
+  {
+    "name": "Simone",
+    "age": "2 ans",
+    "breed": "Chat",
+    "type": "Chat",
+    "city": "Lyon",
+    "zipcode": "69000",
+    "description": "Simone adore les câlins est faire la sieste sur vos genoux, le bolide à ronron de 240 chevaux vous fera craquer !",
+    "imageUrl": "/assets/simone.jpg"
   }
 ]
