@@ -100,6 +100,7 @@
     "imageUrl": "/assets/ragnar.jpg"
   },
 
+
   {
     "name": "Simone",
     "age": "2 ans",
@@ -109,5 +110,16 @@
     "zipcode": "69000",
     "description": "Simone adore les câlins est faire la sieste sur vos genoux, le bolide à ronron de 240 chevaux vous fera craquer !",
     "imageUrl": "/assets/simone.jpg"
+
+  {
+    "name": "Miette",
+    "age": "7 ans",
+    "breed": "Chat",
+    "type": "Chat",
+    "city": "Lyon",
+    "zipcode": "69007",
+    "description": "Du haut de ses minis pattes, Miette vous jugera dans un premier temps, puis ne vous lâchera plus de la journée. Succombez à ses grands yeux ronds qui crient amour !",
+    "imageUrl": "/assets/Miette.jpg"
+
   }
 ]

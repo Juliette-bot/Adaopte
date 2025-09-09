@@ -26,14 +26,14 @@ body {
 #titleXL {
   justify-items: center;
   font-family: "Amatic SC", sans-serif;
-  font-size: 45px;
+  font-size: 2.8em;
   color: white;
   margin-top: 12.5vh;
 }
 
 #title-text {
   color: white;
-  font-size: 9px;
+  font-size: 0.375em;
   font-family: "Roboto", sans-serif;
   text-align: center;
   max-width: 700px;
@@ -355,6 +355,8 @@ footer p {
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
+    transform: none;
+    height: auto;
   }
 }
 
@@ -401,13 +403,14 @@ footer p {
   gap: 1rem;
   min-height: 100%;
 }
-@media (min-width: 320px) and (max-width: 424px) {
+@media (min-width: 320px) and (max-width: 425px) {
   #container-research-adopt {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
+    
   }
 
   .grid-container {
@@ -432,20 +435,24 @@ footer p {
     text-align: center;
     max-width: 90%;
     margin: 0 auto;
-    margin-top: 155px;
+    margin-top: 218px;
   }
   #titleXL {
     margin-top: 140px;
-    font-size: 30px;
+    font-size: 1.87em;
     align-items: center;
   }
   #title-text {
-    font-size: 10px;
+    font-size: 0.62em;
   }
 
-  #gridPhotos {
-    margin-top: 80px;
-  }
+   #gridPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+      align-items: center;
+      margin-top: 80px;
+}
 
   #seeAnimals {
     display: flex;
@@ -453,30 +460,39 @@ footer p {
   }
 }
 
-@media (min-width: 425px) and (max-width: 1023px) {
+@media (min-width: 426px) and (max-width: 1023px) {
   body {
     font-size: 14px;
   }
 
-  #title-text,
+
   #mainText {
     padding: 0 1rem;
-    font-size: 0.3em;
+    font-size: 1em;
   }
 
   #textToAdopt {
     font-size: 2.5em;
+    margin-top : 410px; 
   }
 
   h3 {
     font-size: 1.5em;
     text-align: center;
   }
+  #gridPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+      align-items: center;
+}
   .grid-container {
     grid-template-columns: 2fr;
     max-width: 500px;
     margin: 0px;
+    margin-top: 30px;
     gap: 1rem;
+
   }
 
   .grid-column {
@@ -485,6 +501,8 @@ footer p {
   .research-home {
     transform: none;
     margin: 1rem auto;
+
+    height: auto;
   }
   #wrapper {
     flex-direction: column;
@@ -501,6 +519,15 @@ footer p {
     margin-top: 970px;
   }
 }
+
+@media (min-width: 1441px) {
+  
+#container-research-adopt {
+  margin-top: -35px !important;
+}
+
+}
+
 .grid-column > .img-big {
   flex: 2;
   border-radius: 10px;
