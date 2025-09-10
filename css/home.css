@@ -25,14 +25,14 @@ body {
 #titleXL {
   justify-items: center;
   font-family: "Amatic SC", sans-serif;
-  font-size: 2.8em;
+  font-size: 45px;
   color: white;
   margin-top: 16.5vh;
 }
 
 #title-text {
   color: white;
-  font-size: 0.375em;
+  font-size: 9px;
   font-family: "Roboto", sans-serif;
   text-align: center;
   max-width: 700px;
@@ -132,8 +132,8 @@ h4 {
 }
 
 .card {
-  width: 15vw;
-  height: 35vh;
+  /*width: 15vw;
+  height: 35vh;*/
   min-width: 250px;
   background: white;
   border: 0.1em #979797;
@@ -159,7 +159,7 @@ h4 {
 
 .card p {
   text-align: center;
-  margin-top: 1em 5%;
+  padding: .8rem;
   font-size: clamp(0.8rem, 1.8vw, 1rem);
 }
 
@@ -232,16 +232,16 @@ h4 {
 /* Écrans larges */
 @media (min-width: 1024px) {
   .card {
-    max-width: 350px;
-    min-height: 350px;
+    max-width: 150px;
+    min-height: 200px;
   }
 }
 
 /* Tablettes */
 @media (min-width: 768px) and (max-width: 1023px) {
   .card {
-    max-width: 300px;
-    min-height: 320px;
+    max-width: 150px;
+    min-height: 200px;
   }
 }
 
@@ -249,7 +249,7 @@ h4 {
 @media (max-width: 767px) {
   .card {
     width: 95%;
-    min-height: 250px;
+    min-height: 200px;
     margin: 0.5em auto;
   }
 }
@@ -257,7 +257,7 @@ h4 {
 /* FOOTER */
 footer {
   background-color: #333333;
-  padding: 1rem 0;
+  padding: 3rem 2rem 1rem;
   font-size: 1rem;
 }
 
@@ -279,11 +279,6 @@ footer p {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-}
-
-#item {
-  max-width: 100%;
-  text-align: center;
 }
 
 #brand,
@@ -327,11 +322,15 @@ footer p {
 }
 
 /* Media Queries */
+
 @media (max-width: 768px) {
 
   .footer {
     width: 100%;
   }
+
+@media (min-width: 425px) and (max-width: 1023px) {
+
 
   #mainText {
     max-width: 700px;
@@ -373,6 +372,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
   }
 
   #brand,
@@ -446,6 +446,8 @@ footer p {
 
   h4 {
     font-size: 2.7rem;
+
+
   }
 }
 
@@ -492,14 +494,15 @@ footer p {
   min-height: 100%;
 }
 
+
 @media (min-width: 320px) and (max-width: 425px) {
+
   #container-research-adopt {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
-    
 
   }
 
@@ -529,17 +532,17 @@ footer p {
     text-align: center;
     max-width: 90%;
     margin: 0 auto;
-    margin-top: 218px;
+    margin-top: 155px;
   }
 
   #titleXL {
     margin-top: 140px;
-    font-size: 1.87em;
+    font-size: 30px;
     align-items: center;
   }
 
   #title-text {
-    font-size: 0.62em;
+    font-size: 10px;
   }
 
   #gridPhotos {
@@ -547,6 +550,7 @@ footer p {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+
     margin-top: 80px;
   }
 
@@ -556,21 +560,25 @@ footer p {
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 425px) and (max-width: 1023px) {
   body {
     font-size: 14px;
   }
+
 
 
   #title-text,
   #mainText {
     padding: 0 1rem;
     font-size: 0.5em;
+
   }
 
   #textToAdopt {
     font-size: 2.5em;
+
     margin-top: 250px;
+
   }
 
   h3 {
@@ -585,22 +593,19 @@ footer p {
     align-items: center;
   }
 
-  .grid-container {
-    grid-template-columns: 2fr;
-    max-width: 500px;
-    margin: 0px;
-    margin-top: 30px;
-    gap: 1rem;
+=======
 
-  }
 
   .grid-column {
     min-height: 500px;
-  }
+  
 
-   .research-home {
-    display: flex;
-    flex-wrap: wrap;
+   
+  .research-home {
+    transform: none;
+    margin: 1rem auto;
+  }
+  #wrapper {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -616,6 +621,7 @@ footer p {
   }
 }
 
+
 @media (min-width: 1441px) {
 
   #container-research-adopt {
@@ -624,7 +630,8 @@ footer p {
 
 }
 
-.grid-column>.img-big {
+
+.grid-column > .img-big {
   flex: 2;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(197, 195, 195, 0.5);
