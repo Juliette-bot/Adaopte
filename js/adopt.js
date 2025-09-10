@@ -4,6 +4,7 @@ const navLinks = document.getElementById('navLinks')
 
 burgerBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active')
+    navLinks.classList.toggle('active')
 })
 
 // Fonction permettant de créer des cards, chaque card représente un animal avec sa photo et ses photos. Les informations 
@@ -11,7 +12,11 @@ burgerBtn.addEventListener('click', () => {
 function displayPhotosAdopt(animals) {
 
     animals.forEach((animal) => {
-        const flex = document.getElementById('flex-card-adoption')
+
+    //const animalsOnScreen = animals.slice(0, 8)
+    const flex = document.getElementById('flex-card-adoption')
+    //flex.innerText = ""
+
 
         const card = document.createElement("div")
         card.classList.add("cardAdopt")
@@ -78,6 +83,82 @@ async function startingAdoptPage() {
         let filteredAnimalsData = localStorage.getItem('filteredAnimals')
         let animals = JSON.parse(filteredAnimalsData)
         displayPhotosAdopt(animals)
+        const meet = document.createElement("a")
+        meet.innerText = "Rencontrer"
+        meet.classList.add("btnMeetAdopt");
+
+
+        cardText.appendChild(type);
+        cardText.appendChild(h2);
+        cardText.appendChild(age);
+        cardText.appendChild(city);
+        cardText.appendChild(description);
+
+        divMeet.appendChild(meet);
+
+
+
+    };
+}
+displayPhotosAdopt()
+
+
+function addNbrBtn() {
+    const limite = 8
+    const item = document.querySelector('.cardAdopt')
+    for (let item = 0; item < limite; item++) {
+        displayPhotosAdopt()
+    }
+
+    for (let i = 1; i <= page; i++) {
+        console.log('btn')
+        const btnNumber = document.createElement('button')
+        btnNumber.innerText = i
+        pagination.appendChild(btnNumber)
+    }
+
+
+
+}
+//addNbrBtn()
+
+function nextBtn() {
+
+    const nextBtn = document.createElement('button')
+    nextBtn.innerText = "Suivant »"
+    pagination.appendChild(nextBtn)
+
+    nextBtn.addEventListener('click', (btn) => {
+        if (currentPage < page) {
+            currentPage++
+            console.log(currentPage)
+
+        }
+
+        if (currentPage === 2) {
+            console.log(dataSecondePage)
+        }
+    })
+}
+
+//nextBtn()
+
+
+
+const reasearchQuery = localStorage.getItem('quantityAnimalsFind')
+if (reasearchQuery !== null) {
+    const found = (reasearchQuery)
+    const inputTypeAnimals = document.getElementById('grid-animaux-trouvés')
+    inputTypeAnimals.innerText = `${found} animal trouvé`
+
+
+
+}
+const filteredAnimalsData = localStorage.getItem('filteredAnimals')
+
+if (filteredAnimalsData) {
+    const animals = JSON.parse(filteredAnimalsData)
+    const container = document.getElementById('flex-card-adoption')
 
     } else if (reasearchQuery == 0) {
         let found = (reasearchQuery)
@@ -94,7 +175,7 @@ async function startingAdoptPage() {
 
     localStorage.removeItem('filteredAnimals')
     localStorage.removeItem('quantityAnimalsFind')
-}
+
 
 // Fonction permettant de récupérer les données des animaux
 async function animalsResearch() {

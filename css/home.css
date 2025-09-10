@@ -459,8 +459,10 @@ footer p {
 
 /* PHOTOS ACCUEIL*/
 #gridPhotos {
-  display: flex;
-  gap: 15px;
+
+    display: flex;
+   
+    gap: 15px;
 }
 
 .columns {
