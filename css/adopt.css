@@ -45,10 +45,9 @@ main {
 #btn-research {
     grid-column: 3/4;
     grid-row: 1/2;
-    background-color: #333;
-    color: white;
+    background-color:#333;
+    color:white;
     border-radius: 25px;
-    ;
     font-family: 'roboto', 'sans-serif';
     font-weight: 500;
     font-size: 0.8em;
@@ -230,7 +229,14 @@ input {
         font-size: 1.7rem;
     }
 
-  #flex-card-adoption {
+    .cardAdopt
+    {
+        width: auto;
+        height: auto;
+        flex: 1 1 100%
+    }
+
+    #flex-card-adoption {
         max-width: 100%; 
         padding: 2em; 
         gap: 2em; 
@@ -243,6 +249,42 @@ input {
     }
 
     .cardPhotoAdopt {
-            height: 400px;
-    }
+            height: 400px;    }
 }
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1%;
+    margin-bottom: 1%;
+}
+
+.button {
+    background-color: white;
+    font-weight: 700;
+    color:#ff6d38;
+    height: 3%;
+    width: 3%;
+    border-radius: 15%;
+    height: 6vh;
+    outline: none; 
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.button.active {
+    background-color: #ff6d38;
+    color: white;
+}
+
+ .nextBtn {
+    background-color: white;
+    font-weight: 700;
+    border-radius: 10%;
+    color:#ff6d38;
+    outline: none; 
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
