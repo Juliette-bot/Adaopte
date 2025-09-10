@@ -1,16 +1,122 @@
 
 const burgerBtn = document.getElementById('burgerBtn')
 const navLinks = document.getElementById('navLinks')
+const pagination = document.getElementById("pagination")
+let array = []
+const elementsParPage = 8
+let currentPage = 1
 
 burgerBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active')
 })
 
+function getArray() {
+    return array
+}
+
+function setArray(value) {
+    array = value
+}
+
+// Fonction permettant de récupérer les données du JSON animals
+async function animalsResearch() {
+    const response = await fetch('../assets/animals.json')
+    array = await response.json()
+}
+
+//Fonction permettant de calculer le nombre de page sur le site selon le nombre de cards (elementsParPage) que l'on veut avoir par
+//page
+function nbrPage(elementsParPage) {
+    const totalPages = Math.ceil(array.length / elementsParPage)
+    return totalPages
+}
+
+
+//Fonction permettant d'afficher un certain nombre de card d'animaux selon la page sur laquelle on se trouve
+function callDataPage(page) {
+    const debut = (page * elementsParPage) - elementsParPage
+    const fin = page * elementsParPage
+    const elementsActuels = array.slice(debut, fin)
+    displayPhotosAdopt(elementsActuels)
+    return elementsActuels
+}
+
+
+//Fonction permettant d'afficher le nombre de boutons selon le nombre total de pages qu'il doit y avoir dans le site
+function addNbrBtn(totalPages) {
+    pagination.innerHTML = ""
+
+    for (let i = 1; i <= totalPages; i++) {
+        let btnNumber = document.createElement('button')
+        btnNumber.innerText = i
+        btnNumber.classList.add('button')
+        btnNumber.id = i
+
+        btnNumber.addEventListener("click", (event) => {
+            const page = parseInt(event.target.id)
+            currentPage = page
+
+            callDataPage(page)
+
+            let allBtns = document.getElementsByClassName('button')
+            for (let btn of allBtns) {
+                btn.classList.remove('active')
+            }
+
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+            })
+
+            event.target.classList.add('active')
+        })
+
+         
+
+        pagination.appendChild(btnNumber)
+    }
+
+    if (pagination.firstChild) {
+        pagination.firstChild.classList.add('active')
+    }
+}
+
+
+async function nextBtn() {
+
+    const nextBtn = document.createElement('button')
+    nextBtn.innerText = "Suivant »"
+    nextBtn.classList.add("nextBtn")
+    pagination.appendChild(nextBtn)
+
+    nextBtn.addEventListener("click", () => {
+    const totalPages = nbrPage(elementsParPage) 
+
+    if (currentPage < totalPages) {
+        currentPage++
+        callDataPage(currentPage)
+
+        let allBtns = document.getElementsByClassName('button')
+        for (let btn of allBtns) {
+            btn.classList.remove('active')
+        }
+        const btnActif = document.getElementById(currentPage)
+        if (btnActif) btnActif.classList.add('active')
+
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+})
+}
+
+
+
 // Fonction permettant de créer des cards, chaque card représente un animal avec sa photo et ses photos. Les informations 
 // sont récupérés grâce à un tableau (animals)
-function displayPhotosAdopt(animals) {
+function displayPhotosAdopt(array) {
+    const flex = document.getElementById('flex-card-adoption')
+    flex.innerText = ""
 
-    animals.forEach((animal) => {
+    array.forEach((animal) => {
         const flex = document.getElementById('flex-card-adoption')
 
         const card = document.createElement("div")
@@ -53,7 +159,7 @@ function displayPhotosAdopt(animals) {
         description.innerText = animal.description
         description.classList.add("descriptionCardAdopt")
 
-        const meet = document.createElement("a")
+        const meet = document.createElement("btn")
         meet.innerText = "Rencontrer"
         meet.classList.add("btnMeetAdopt")
 
@@ -64,44 +170,57 @@ function displayPhotosAdopt(animals) {
         cardText.appendChild(description)
         divMeet.appendChild(meet)
 
+        meet.addEventListener("click", () => {
+            console.log(`${animal.name}, ${animal.type}`)
+        })
+
     })
 }
+
 
 // Fonction permettant de gérer plusieurs cas d'affichage des cards des animaux au chargement de la page Adopt
 async function startingAdoptPage() {
     let reasearchQuery = localStorage.getItem('quantityAnimalsFind')
+    await animalsResearch()
 
     if (reasearchQuery > 0) {
         let found = (reasearchQuery)
         let inputTypeAnimals = document.getElementById('grid-animaux-trouves')
         inputTypeAnimals.innerText = `${found} animal trouvé`
-        let filteredAnimalsData = localStorage.getItem('filteredAnimals')
-        let animals = JSON.parse(filteredAnimalsData)
-        displayPhotosAdopt(animals)
+        let filteredAnimalsData = localStorage.getItem('array')
+        array = JSON.parse(filteredAnimalsData)
+        const dataTotalPage = nbrPage(elementsParPage)
+        addNbrBtn(dataTotalPage)
+        let btn1 = document.getElementById('1')
+        btn1.classList.add('active')
+        callDataPage(1)
+        nextBtn()
 
     } else if (reasearchQuery == 0) {
         let found = (reasearchQuery)
         let inputTypeAnimals = document.getElementById('grid-animaux-trouves')
         inputTypeAnimals.innerText = `${found} animal trouvé`
-        let response = await fetch("/assets/animals.json");
-        let animals = await response.json();
-        displayPhotosAdopt(animals)
+        const dataTotalPage = nbrPage(elementsParPage)
+        addNbrBtn(dataTotalPage)
+        let btn1 = document.getElementById('1')
+        btn1.classList.add('active')
+        callDataPage(1)
+        nextBtn()
 
     } else {
-        let animals = await animalsResearch()
-        displayPhotosAdopt(animals)
+        const dataTotalPage = nbrPage(elementsParPage)
+        callDataPage(1)
+        addNbrBtn(dataTotalPage)
+        let btn1 = document.getElementById('1')
+        btn1.classList.add('active')
+        nextBtn()
     }
 
-    localStorage.removeItem('filteredAnimals')
+    localStorage.removeItem('array')
     localStorage.removeItem('quantityAnimalsFind')
 }
 
-// Fonction permettant de récupérer les données des animaux
-async function animalsResearch() {
-    const response = await fetch('../assets/animals.json')
-    const listAnimals = await response.json()
-    return listAnimals
-}
+
 
 // Fonction permettant de récupérer le type d'animal choisi dans la liste déroulante de la section "recherche"
 function choice_select() {
@@ -123,16 +242,16 @@ btnResearch.addEventListener('click', async (e) => {
 
     let typeAnimals = choice_select()
     let cityRaw = city.value
-    
+
     if (typeAnimals == "") {
         inputTypeAnimals.innerText = "Merci de choisir une ville"
     } else if ((cityRaw == "")) {
         inputTypeAnimals.innerText = "Merci de choisir un type d'animal"
     } else {
         let cityValue = cityRaw[0].toUpperCase() + cityRaw.slice(1)
-        let listAnimals = await animalsResearch()
-        let filteredAnimals = listAnimals.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
-        let quantityTypeAnimalsFind = filteredAnimals.length
+        await animalsResearch()
+        array = array.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
+        let quantityTypeAnimalsFind = array.length
 
         if (quantityTypeAnimalsFind > 1) {
             inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animaux trouvés`
@@ -140,12 +259,15 @@ btnResearch.addEventListener('click', async (e) => {
             inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animal trouvé`
         }
 
-        displayPhotosAdopt(filteredAnimals)
+        const dataTotalPage = nbrPage(elementsParPage)
+        addNbrBtn(dataTotalPage)
+        callDataPage(1)
+        nextBtn()
     }
-
-
 })
+
+
 
 startingAdoptPage()
 
-export {choice_select, animalsResearch}
+export { choice_select, animalsResearch, getArray, setArray }

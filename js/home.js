@@ -1,4 +1,4 @@
-import { choice_select, animalsResearch} from './adopt.js'
+import { choice_select, animalsResearch, setArray, getArray} from './adopt.js'
 
 const btnResearch = document.getElementById('btn-research')
 
@@ -13,12 +13,12 @@ btnResearch.addEventListener('click', async (e) => {
     }
     let cityValue = cityRaw[0].toUpperCase() + cityRaw.slice(1)
 
-    let listAnimals = await animalsResearch()
-    let filteredAnimals = listAnimals.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
+    await animalsResearch()
+    setArray(getArray().filter(animal => animal.type === typeAnimals && animal.city === cityValue))
 
-    let quantityTypeAnimalsFind = filteredAnimals.length
+    let quantityTypeAnimalsFind = getArray().length
     console.log(quantityTypeAnimalsFind)
-    localStorage.setItem('filteredAnimals', JSON.stringify(filteredAnimals))
+    localStorage.setItem('array', JSON.stringify(getArray()))
     localStorage.setItem('quantityAnimalsFind', quantityTypeAnimalsFind)
     window.location.href = `/home/adopt.html?found=${quantityTypeAnimalsFind}`
     

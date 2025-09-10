@@ -47,7 +47,7 @@ main {
     grid-row: 1/2;
     background-color:#333;
     color:white;
-    border-radius: 25px;;
+    border-radius: 25px;
     font-family: 'roboto', 'sans-serif';
     font-weight: 500;
     font-size: 0.8em;
@@ -238,3 +238,40 @@ input{
         
     }
 }
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1%;
+    margin-bottom: 1%;
+}
+
+.button {
+    background-color: white;
+    font-weight: 700;
+    color:#ff6d38;
+    height: 3%;
+    width: 3%;
+    border-radius: 15%;
+    height: 6vh;
+    outline: none; 
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.button.active {
+    background-color: #ff6d38;
+    color: white;
+}
+
+ .nextBtn {
+    background-color: white;
+    font-weight: 700;
+    border-radius: 10%;
+    color:#ff6d38;
+    outline: none; 
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
