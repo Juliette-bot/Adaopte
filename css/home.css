@@ -8,14 +8,13 @@ body {
 
   margin: 0;
 }
+
 #researchSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(
-      rgba(230, 230, 230, 0.1),
-      rgba(0, 0, 0, 0.8)
-    ),
+  background-image: linear-gradient(rgba(230, 230, 230, 0.1),
+      rgba(0, 0, 0, 0.8)),
     url("../assets/background.jpg");
   background-position: center;
   background-size: cover;
@@ -28,7 +27,7 @@ body {
   font-family: "Amatic SC", sans-serif;
   font-size: 2.8em;
   color: white;
-  margin-top: 12.5vh;
+  margin-top: 16.5vh;
 }
 
 #title-text {
@@ -81,8 +80,10 @@ h4 {
   max-width: 500px;
   margin: 0 auto;
 }
+
+
 .research-home {
-  transform: translate(100px, 100px);
+  transform: translate(100px, 108px);
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   height: 7.5vh;
@@ -263,17 +264,20 @@ footer {
 footer a {
   color: white;
   text-decoration: none;
+  gap: 1rem;
+  gap: 1rem;
 }
 
 footer p {
   font-family: "Roboto", sans-serif;
   text-align: left;
+  align-items: center;
+  align-items: center;
 }
 
 #wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
   gap: 1.5rem;
 }
 
@@ -283,9 +287,12 @@ footer p {
 }
 
 #brand,
-#info {
+#info,
+#contact {
   color: white;
   text-align: left;
+  flex: 1;
+  margin: 0 5%;
 }
 
 #logosMedias {
@@ -310,9 +317,6 @@ footer p {
   list-style: none;
 }
 
-#contact {
-  color: white;
-}
 
 #licence {
   color: #979797;
@@ -323,7 +327,8 @@ footer p {
 }
 
 /* Media Queries */
-@media (min-width: 425px) and (max-width: 1023px) {
+@media (max-width: 768px) {
+
   .footer {
     width: 100%;
   }
@@ -338,27 +343,112 @@ footer p {
   }
 
   #wrapper {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  #item,
-  #brand {
-    max-width: 400px;
-    text-align: left;
-  }
-
-  .research-home {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    transform: none;
-    height: auto;
+  }
+
+  #brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #brand,
+  #info,
+  #contact {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h4 {
+    justify-self: center;
+  }
+
+  #brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #brand,
+  #info,
+  #contact {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2560px) {
+
+  /* CHANGE LIFE SECTION */
+
+  #changeLifeSection h2 {
+      font-size: 5.5rem;
+  }
+
+  #changeLifeSection p {
+      font-size: 2rem;
+    }
+  
+#title-text {
+  font-size: 0.5em ;
+}
+#titleXL {
+  margin-top : 90px;
+}
+#mainText {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #484848;
+    font-size: 1.5rem;
+}
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .research-home {
+  transform: translate(100px, 50px);
+}
+
+  /* FOOTER */
+
+  footer {
+    font-size: 1.7rem;
+  }
+
+  footer a {
+    font-size: 1.7rem;
+  }
+
+  h4 {
+    font-size: 2.7rem;
   }
 }
+
 
 @media (max-width: 480px) {
   .footer {
@@ -401,6 +491,7 @@ footer p {
   gap: 1rem;
   min-height: 100%;
 }
+
 @media (min-width: 320px) and (max-width: 425px) {
   #container-research-adopt {
     display: flex;
@@ -409,6 +500,7 @@ footer p {
     justify-content: center;
     font-size: 0.8rem;
     
+
   }
 
   .grid-container {
@@ -422,12 +514,16 @@ footer p {
     min-height: 400px;
   }
 
-  .research-home {
+  .research-home  {
     transform: none;
     margin: 1rem auto;
     width: 90%;
     height: auto;
+    margin-top: -65px ;
+
+    
   }
+
   #textToAdopt {
     font-size: 1.5em;
     text-align: center;
@@ -435,22 +531,24 @@ footer p {
     margin: 0 auto;
     margin-top: 218px;
   }
+
   #titleXL {
     margin-top: 140px;
     font-size: 1.87em;
     align-items: center;
   }
+
   #title-text {
     font-size: 0.62em;
   }
 
-   #gridPhotos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-      align-items: center;
-      margin-top: 80px;
-}
+  #gridPhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 80px;
+  }
 
   #seeAnimals {
     display: flex;
@@ -464,26 +562,29 @@ footer p {
   }
 
 
+  #title-text,
   #mainText {
     padding: 0 1rem;
-    font-size: 1em;
+    font-size: 0.5em;
   }
 
   #textToAdopt {
     font-size: 2.5em;
-    margin-top : 410px; 
+    margin-top: 250px;
   }
 
   h3 {
     font-size: 1.5em;
     text-align: center;
   }
+
   #gridPhotos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-      align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
   .grid-container {
     grid-template-columns: 2fr;
     max-width: 500px;
@@ -496,22 +597,19 @@ footer p {
   .grid-column {
     min-height: 500px;
   }
-  .research-home {
-    transform: none;
-    margin: 1rem auto;
 
-    height: auto;
-  }
-  #wrapper {
+   .research-home {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    font-size: 0.8rem;
+    transform:  translate(10px, 78px);
+    height: auto;
+
   }
 
-  #item {
-    max-width: 100%;
-    text-align: center;
-  }
   #seeAnimals {
     display: flex;
     margin-top: 970px;
@@ -519,14 +617,14 @@ footer p {
 }
 
 @media (min-width: 1441px) {
-  
-#container-research-adopt {
-  margin-top: -35px !important;
-}
+
+  #container-research-adopt {
+    margin-top: -35px !important;
+  }
 
 }
 
-.grid-column > .img-big {
+.grid-column>.img-big {
   flex: 2;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(197, 195, 195, 0.5);
@@ -534,7 +632,7 @@ footer p {
   width: 100%;
 }
 
-.grid-column > .img-small {
+.grid-column>.img-small {
   flex: 1;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(82, 82, 82, 0.5);
