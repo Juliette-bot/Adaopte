@@ -1,12 +1,21 @@
 html {
   max-width: 100vw;
+  max-height: 100vh;
   height: 100%;
+}
+
+main {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 body {
   font-family: "Roboto", sans-serif;
 
   margin: 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 #researchSection {
@@ -19,7 +28,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 480px;
+  height: 50vh;
 }
 
 #titleXL {
@@ -27,16 +36,14 @@ body {
   font-family: "Amatic SC", sans-serif;
   font-size: 45px;
   color: white;
-  margin-top: 16.5vh;
 }
 
 #title-text {
   color: white;
-  font-size: 9px;
+  font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
   max-width: 700px;
-  margin-top: -25px;
   line-height: 35px;
 }
 
@@ -60,15 +67,17 @@ h4 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   color: #ff6d39;
   text-align: left;
+
 }
 
 #mainText {
   font-size: small;
   font-family: "Roboto", sans-serif;
   color: gray;
-  max-width: 580px;
+  max-width: 90vw;
   text-align: center;
-  margin-top: -15px;
+  font-size: 1.2rem;
+  width: 60%;
 }
 
 #form-wrapper {
@@ -83,11 +92,59 @@ h4 {
 
 
 .research-home {
-  transform: translate(100px, 108px);
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   height: 7.5vh;
-  margin-left: -13.2vw;
+}
+
+#container-grid-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#container-research-home {
+  margin-top: -3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  width: 60%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+
+#grid-types-animaux-home {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#grid-localisation-home {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#btn-research-home {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color:#333;
+  color:white;
+  border-radius: 25px;
+  font-family: 'roboto', 'sans-serif';
+  font-weight: 500;
+  font-size: 0.8em;
+  height: 4vh;
+  margin-top: 3vh;
+  align-self: end;
 }
 
 #textToAdopt {
@@ -95,7 +152,6 @@ h4 {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin-top: 14vh;
   font-family: "Amatic SC", sans-serif;
   font-size: 3em;
 }
@@ -105,44 +161,39 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 60vh;
   background-color: white;
   color: #666;
-  padding: 1em;
+  min-height: auto;
 }
 
 #howToDo {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0.5em;
-  margin: 0;
-}
-
-#mainText {
-  max-width: 800px;
 }
 
 .cardsHtml {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 2%;
   padding: 1rem;
+  width: 80%;
 }
 
 .card {
   /*width: 15vw;
   height: 35vh;*/
-  min-width: 250px;
+  width: 50%;
   background: white;
   border: 0.1em #979797;
   box-shadow: 0 3px 6px rgb(150, 151, 151);
   border-radius: 15px;
   padding: 1em;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   transition: all 0.3s ease;
+
 }
 
 .card:hover {
@@ -177,20 +228,11 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
 }
 
 #changeLife {
   padding: 0.5em;
   margin: 0;
-}
-
-#mainText {
-  max-width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  color: #484848;
-  font-size: 1rem;
 }
 
 #flexGap-1 {
@@ -229,35 +271,9 @@ h4 {
   background-color: var(--btn-accent-bg);
 }
 
-/* Écrans larges */
-@media (min-width: 1024px) {
-  .card {
-    max-width: 150px;
-    min-height: 200px;
-  }
-}
-
-/* Tablettes */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .card {
-    max-width: 150px;
-    min-height: 200px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .card {
-    width: 95%;
-    min-height: 200px;
-    margin: 0.5em auto;
-  }
-}
-
 /* FOOTER */
 footer {
   background-color: #333333;
-  padding: 3rem 2rem 1rem;
   font-size: 1rem;
 }
 
@@ -272,13 +288,13 @@ footer p {
   font-family: "Roboto", sans-serif;
   text-align: left;
   align-items: center;
-  align-items: center;
+  font-size: 0.8rem;
 }
 
 #wrapper {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 #brand,
@@ -323,18 +339,24 @@ footer p {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
 
-  .footer {
-    width: 100%;
+@media (min-width: 319px) and (max-width: 1023px) {
+
+  footer {
+    font-size: 0.8rem;
   }
 
-@media (min-width: 425px) and (max-width: 1023px) {
+  footer a {
+    font-size: 0.8rem;
+  }
 
+  h4 {
+    font-size: 1.5rem;
+  }
 
-  #mainText {
-    max-width: 700px;
-    font-size: 1.1rem;
+  #adoptSection {
+    display: flex;
+    flex-direction: column;
   }
 
   #flexGap-1 {
@@ -354,14 +376,6 @@ footer p {
     justify-content: center;
   }
 
-  #brand,
-  #info,
-  #contact {
-    color: white;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
 
   h4 {
     justify-self: center;
@@ -372,7 +386,6 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
   }
 
   #brand,
@@ -384,78 +397,46 @@ footer p {
     justify-content: center;
   }
 
-
-}
-
-/* media query pour ECRAN 4K */
-@media (min-width: 2560px) {
-
-  /* CHANGE LIFE SECTION */
-
-  #changeLifeSection h2 {
-      font-size: 5.5rem;
+  #btn-research-home {
+    font-size: 0.7rem;
+    width: 75%;
+    align-self: center;
+    margin-top: 0vh;
   }
 
-  #changeLifeSection p {
-      font-size: 2rem;
-    }
-  
-#title-text {
-  font-size: 0.5em ;
-}
-#titleXL {
-  margin-top : 90px;
-}
-#mainText {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    color: #484848;
-    font-size: 1.5rem;
-}
-
-  .btnAdopt,
-  .btnDonation,
-  .btnVolonteer {
-    text-decoration: none;
-    border-radius: 1.8rem;
-    border: 0;
-    padding: 1rem 1.5rem;
-    font-family: var(--font-family-simple);
-    font-weight: 800;
-    font-size: 1.8rem;
-    color: white;
-    flex: 1 1 auto;
-    max-width: 50%;
-    text-align: center;
+  #container-research-home {
+    margin-top: -15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
   }
 
-  .research-home {
-  transform: translate(100px, 50px);
-}
-
-  /* FOOTER */
-
-  footer {
-    font-size: 1.7rem;
+  #grid-types-animaux-home {
+    align-items: center;
   }
 
-  footer a {
-    font-size: 1.7rem;
+  #select-home {
+    width: 60vw;
+    align-items: center;
   }
 
-  h4 {
-    font-size: 2.7rem;
-
-
+  #grid-localisation-home {
+    align-items: center;
+    width: 50%;
   }
+
+  #localisation-home {
+    width: 60vw;
+  }
+
+
 }
 
 
 @media (max-width: 480px) {
-  .footer {
-    width: 100%;
-  }
 
   .btnAdopt,
   .btnDonation,
@@ -484,7 +465,7 @@ footer p {
   gap: 1rem;
   height: 1100px;
   width: 100%;
-  margin: 60px;
+  margin: 2%;
 }
 
 .grid-column {
@@ -495,36 +476,35 @@ footer p {
 }
 
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 768px) {
 
-  #container-research-adopt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  #mainText {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #484848;
     font-size: 0.8rem;
+  }
 
+  #ourMission {
+    text-align: center;
   }
 
   .grid-container {
-    grid-template-columns: 2fr;
-    max-width: 500px;
+    grid-template-columns: repeat(2, 2fr);
     margin: 0px;
     gap: 1rem;
+    width: 90%;
   }
 
   .grid-column {
     min-height: 400px;
   }
 
-  .research-home  {
-    transform: none;
+  .research-home {
     margin: 1rem auto;
     width: 90%;
     height: auto;
-    margin-top: -65px ;
-
-    
   }
 
   #textToAdopt {
@@ -532,106 +512,51 @@ footer p {
     text-align: center;
     max-width: 90%;
     margin: 0 auto;
-    margin-top: 155px;
   }
 
   #titleXL {
-    margin-top: 140px;
     font-size: 30px;
     align-items: center;
   }
 
   #title-text {
-    font-size: 10px;
-  }
-
-  #gridPhotos {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-
-    margin-top: 80px;
-  }
-
-  #seeAnimals {
-    display: flex;
-    margin-top: 570px;
-  }
-}
-
-@media (min-width: 425px) and (max-width: 1023px) {
-  body {
-    font-size: 14px;
-  }
-
-
-
-  #title-text,
-  #mainText {
     padding: 0 1rem;
     font-size: 0.5em;
-
-  }
-
-  #textToAdopt {
-    font-size: 2.5em;
-
-    margin-top: 250px;
-
-  }
-
-  h3 {
-    font-size: 1.5em;
-    text-align: center;
   }
 
   #gridPhotos {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
-  }
-
-=======
-
-
-  .grid-column {
-    min-height: 500px;
-  
-
-   
-  .research-home {
-    transform: none;
-    margin: 1rem auto;
-  }
-  #wrapper {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    transform:  translate(10px, 78px);
-    height: auto;
-
+    margin: 2%;
   }
 
   #seeAnimals {
     display: flex;
-    margin-top: 970px;
+    margin-top: 2%;
+  }
+
+  .cardsHtml {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    flex-wrap: wrap;
+    padding: 1rem;
+    width: 100vw;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .card {
+    width: 70%;
   }
 }
 
 
-@media (min-width: 1441px) {
-
-  #container-research-adopt {
-    margin-top: -35px !important;
-  }
-
-}
-
-
-.grid-column > .img-big {
+.grid-column>.img-big {
   flex: 2;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgb(197, 195, 195, 0.5);
@@ -663,6 +588,122 @@ footer p {
   color: white;
   text-align: center;
   text-decoration: none;
-  background-color: black;
-  margin-bottom: 8vh;
+  background-color: #333;
+  margin-bottom: 3%;
+}
+
+/* media query pour ECRAN 4K */
+@media (min-width: 2560px) {
+
+  /* CHANGE LIFE SECTION */
+
+
+  #title-text {
+    font-size: 0.5em;
+  }
+
+  #mainText {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #484848;
+    font-size: 2.5rem;
+  }
+
+  .btnAdopt,
+  .btnDonation,
+  .btnVolonteer {
+    text-decoration: none;
+    border-radius: 1.8rem;
+    border: 0;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-family-simple);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: white;
+    flex: 1 1 auto;
+    max-width: 50%;
+    text-align: center;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    font-size: 1.7rem;
+  }
+
+  footer a {
+    font-size: 1.7rem;
+  }
+
+    footer p {
+    font-size: 1.7rem;
+  }
+
+  h4 {
+    font-size: 2.7rem;
+  }
+
+  #container-research-home,
+  #btn-research-home {
+    font-size: 2rem;
+    font-family: 'roboto', 'sans-serif';
+  }
+
+  input,
+  #select-home {
+    width: 15vw;
+    font-size: 2rem;
+    font-family: 'roboto', 'sans-serif';
+  }
+
+  #btn-research-home {
+    width: 75%;
+    margin-top: 2vh;
+  }
+
+
+  #grid-types-animaux-home {
+
+    align-items: center;
+  }
+
+  #grid-localisation-home {
+    align-items: center;
+  }
+
+  .card p {
+    font-size: 2rem;;
+  }
+
+  .card h3 {
+    font-size: 3rem;
+  }
+
+  .cardsHtml {
+    width:90%;
+  }
+
+  h2 {
+    font-size: 5.5rem;
+  }
+
+  #animalsLink {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  #titleXL h1 {
+    font-size: 7rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #title-text {
+    font-size: 2.5rem;
+    max-width: 50%;
+  }
 }

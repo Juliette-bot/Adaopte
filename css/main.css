@@ -43,6 +43,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0.8rem;
+    font-weight: 600;
 }
 
 .logo {
@@ -160,5 +161,15 @@ body {
         width: 100%;
         justify-content: center;
         margin-top: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .btnNavBar {
+        font-size: 1.5rem;
+    }
+
+    a {
+        font-size: 1.7rem;
     }
 }

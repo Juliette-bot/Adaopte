@@ -2,6 +2,7 @@ main {
     background-color: #f9f9f9;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
+    padding-bottom: 1rem;
 }
 
 /* FILTRE RECHERCHE PAR ANIMAUX */
@@ -14,7 +15,7 @@ main {
 }
 
 #container-research-adopt {
-    margin-top: 20px;
+    margin-top: 1%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr;
@@ -77,7 +78,6 @@ main {
     }
 
     #select-adopt {
-        width: 30vh;
         align-items: center;
     }
 
@@ -160,7 +160,7 @@ input {
     padding-top: 0.2rem;
     padding-bottom: 0.5rem;
     font-family: "Roboto", sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: left;
     color: #8584ff;
 }
@@ -203,19 +203,25 @@ input {
     .cardPhotoAdopt {
         height: 180px;
     }
+
+    #localisation {
+        width: 60vw;
+    }
 }
 
 @media (min-width: 2560px) {
 
     #container-research-adopt,
     #grid-réinitialisation a,
-    #btn-research {
+    #btn-research
+     {
         font-size: 1.7rem;
         font-family: 'roboto', 'sans-serif';
     }
 
     input,
-    #select-adopt {
+    #select-adopt
+     {
         font-size: 1.5rem;
         font-family: 'roboto', 'sans-serif';
     }
@@ -227,13 +233,6 @@ input {
 
     .cardTextAdopt {
         font-size: 1.7rem;
-    }
-
-    .cardAdopt
-    {
-        width: auto;
-        height: auto;
-        flex: 1 1 100%
     }
 
     #flex-card-adoption {
@@ -249,25 +248,25 @@ input {
     }
 
     .cardPhotoAdopt {
-            height: 400px;    }
+            height: 400px;
+    }
+
 }
 
 #pagination {
     display: flex;
     justify-content: center;
     align-content: center;
-    gap: 1%;
-    margin-bottom: 1%;
+    gap: 0.5%;
 }
 
 .button {
     background-color: white;
     font-weight: 700;
     color:#ff6d38;
-    height: 3%;
     width: 3%;
     border-radius: 15%;
-    height: 6vh;
+    height: 4vh;
     outline: none; 
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
