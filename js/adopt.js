@@ -114,6 +114,7 @@ async function nextBtn() {
 // sont récupérés grâce à un tableau (animals)
 function displayPhotosAdopt(array) {
     const flex = document.getElementById('flex-card-adoption')
+
     flex.innerText = ""
 
     array.forEach((animal) => {
@@ -230,44 +231,43 @@ function choice_select() {
     return choice_selected
 }
 
+export function initAdoptPage() {
+    const btnResearch = document.getElementById('btn-research')
+    btnResearch.addEventListener('click', async (e) => {
+        let flex = document.getElementById('flex-card-adoption')
+        flex.innerText = ""
 
-const btnResearch = document.getElementById('btn-research')
-btnResearch.addEventListener('click', async (e) => {
-    let flex = document.getElementById('flex-card-adoption')
-    flex.innerText = ""
+        e.preventDefault()
+        const city = document.getElementById('localisation')
+        const inputTypeAnimals = document.getElementById('grid-animaux-trouves')
 
-    e.preventDefault()
-    const city = document.getElementById('localisation')
-    const inputTypeAnimals = document.getElementById('grid-animaux-trouves')
+        let typeAnimals = choice_select()
+        let cityRaw = city.value
 
-    let typeAnimals = choice_select()
-    let cityRaw = city.value
-
-    if (typeAnimals == "") {
-        inputTypeAnimals.innerText = "Merci de choisir une ville"
-    } else if ((cityRaw == "")) {
-        inputTypeAnimals.innerText = "Merci de choisir un type d'animal"
-    } else {
-        let cityValue = cityRaw[0].toUpperCase() + cityRaw.slice(1)
-        await animalsResearch()
-        array = array.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
-        let quantityTypeAnimalsFind = array.length
-
-        if (quantityTypeAnimalsFind > 1) {
-            inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animaux trouvés`
+        if (typeAnimals == "") {
+            inputTypeAnimals.innerText = "Merci de choisir une ville"
+        } else if ((cityRaw == "")) {
+            inputTypeAnimals.innerText = "Merci de choisir un type d'animal"
         } else {
-            inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animal trouvé`
+            let cityValue = cityRaw[0].toUpperCase() + cityRaw.slice(1)
+            await animalsResearch()
+            array = array.filter(animal => animal.type === typeAnimals && animal.city === cityValue)
+            let quantityTypeAnimalsFind = array.length
+
+            if (quantityTypeAnimalsFind > 1) {
+                inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animaux trouvés`
+            } else {
+                inputTypeAnimals.innerText = `${quantityTypeAnimalsFind} animal trouvé`
+            }
+
+            const dataTotalPage = nbrPage(elementsParPage)
+            addNbrBtn(dataTotalPage)
+            callDataPage(1)
+            nextBtn()
         }
+    })
 
-        const dataTotalPage = nbrPage(elementsParPage)
-        addNbrBtn(dataTotalPage)
-        callDataPage(1)
-        nextBtn()
-    }
-})
+    startingAdoptPage()
+}
 
-
-
-startingAdoptPage()
-
-export { choice_select, animalsResearch, getArray, setArray }
+export { animalsResearch, getArray, setArray }

@@ -1,12 +1,18 @@
-import { choice_select, animalsResearch, setArray, getArray} from './adopt.js'
+import {animalsResearch, setArray, getArray} from './adopt.js'
 
-const btnResearch = document.getElementById('btn-research')
+const btnResearchHome = document.getElementById('btn-research-home')
 
-btnResearch.addEventListener('click', async (e) => {
-    e.preventDefault()
-    const city = document.getElementById('localisation')
+function choice_select_home() {
+    const select = document.getElementById('select-home')
+    const choice = select.selectedIndex
+    const choice_selected = select.options[choice].value
+    return choice_selected
+}
 
-    let typeAnimals = choice_select()
+btnResearchHome.addEventListener('click', async () => {
+    const city = document.getElementById('localisation-home')
+
+    let typeAnimals = choice_select_home()
     let cityRaw = city.value
     if (cityRaw == '') {
         alert('Merci de mettre une ville')
