@@ -57,34 +57,7 @@ main {
     align-self: end;
 }
 
-@media (max-width: 950px) {
-    #btn-research {
-        font-size: 0.7rem;
-        width: 75%;
-        align-self: center;
-    }
 
-    #container-research-adopt {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.8rem;
-    }
-
-    #grid-types-animaux {
-        align-items: center;
-    }
-
-    #select-adopt {
-        align-items: center;
-    }
-
-    #grid-localisation {
-        align-items: center;
-    }
-}
 
 #grid-animaux-trouvés {
     grid-column: 1/2;
@@ -207,6 +180,8 @@ input {
     #localisation {
         width: 60vw;
     }
+
+
 }
 
 @media (min-width: 2560px) {
@@ -251,6 +226,8 @@ input {
             height: 400px;
     }
 
+
+
 }
 
 #pagination {
@@ -276,6 +253,7 @@ input {
 .button.active {
     background-color: #ff6d38;
     color: white;
+    width: 3%;
 }
 
  .nextBtn {
@@ -287,3 +265,47 @@ input {
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  }
+
+ @media (max-width: 950px) {
+    #btn-research {
+        font-size: 0.7rem;
+        width: 75%;
+        align-self: center;
+    }
+
+    #container-research-adopt {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        gap: 1rem;
+    }
+
+    #grid-types-animaux {
+        align-items: center;
+    }
+
+    #select-adopt {
+        align-items: center;
+    }
+
+    #grid-localisation {
+        align-items: center;
+    }
+
+    #pagination {
+        gap: 1%;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        width: 10%;
+    }
+
+    .button active {
+        font-size: 0.8rem;
+        width: 10%;
+    }
+}
