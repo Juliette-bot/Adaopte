@@ -16,6 +16,7 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 3rem;
 }
 
 #researchSection {
@@ -34,7 +35,7 @@ h1 {
 #titleXL {
   justify-items: center;
   font-family: "Amatic SC", sans-serif;
-  font-size: 45px;
+  font-size: 2rem;
   color: white;
 }
 
@@ -49,7 +50,7 @@ h1 {
 
 h2 {
   font-family: "Amatic SC", sans-serif;
-  font-style: normal;
+  font-style: 3rem;
   font-size: clamp(2rem, 5vw, 4rem);
   color: #333333;
   text-align: center;
@@ -514,14 +515,12 @@ footer p {
     margin: 0 auto;
   }
 
-  #titleXL {
-    font-size: 30px;
-    align-items: center;
-  }
 
   #title-text {
     padding: 0 1rem;
-    font-size: 0.5em;
+    font-size: 0.8rem;
+    align-items: center;
+    line-height: 15px;
   }
 
   #gridPhotos {
@@ -545,6 +544,14 @@ footer p {
     flex-wrap: wrap;
     padding: 1rem;
     width: 100vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
   }
 
 }
