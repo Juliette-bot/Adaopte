@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page principale</title>
+  <style>
+    body { font-family: Arial; }
+    #contenu { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Ici le contenu des autres pages sera injecté -->
+  <div id="contenu"></div>
+
+  <script>
+    // Fonction pour charger un autre HTML
+    function chargerPage(page) {
+      fetch(page)
+        .then(response => {
+          if (!response.ok) throw new Error("Erreur chargement HTML");
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('contenu').innerHTML = data;
+        })
+        .catch(err => console.error(err));
+    }
+
+    // Exemple : charger 'autrePage.html' au chargement
+    chargerPage('home/home.html');
+  </script>
+</body>
+</html>
