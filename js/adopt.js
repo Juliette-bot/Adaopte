@@ -20,7 +20,7 @@ function setArray(value) {
 
 // Fonction permettant de récupérer les données du JSON animals
 async function animalsResearch() {
-    const response = await fetch('../assets/animals.json')
+    const response = await fetch('Adaopte/assets/animals.json')
     array = await response.json()
 }
 
