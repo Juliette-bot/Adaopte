@@ -1,5 +1,5 @@
 async function displayPhotosHome() {
-  const response = await fetch("../assets/animals.json")
+  const response = await fetch("/assets/animals.json")
   const animals = await response.json()
   const imageDivs = document.querySelectorAll("#gridPhotos .img")
   
