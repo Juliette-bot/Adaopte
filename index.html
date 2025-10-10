@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Adaopte</title>
 
-  <!-- Tous les CSS sont chargés ici -->
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/home.css">
   <link rel="stylesheet" href="./css/adopt.css">
@@ -25,7 +24,6 @@
   <div id="contenu"></div>
 
   <script>
-    // Fonction globale pour charger une page dans le div
     function chargerPage(page) {
       fetch(page)
         .then(response => {
@@ -34,25 +32,11 @@
         })
         .then(data => {
           document.getElementById('contenu').innerHTML = data;
-          // Après injection, lier tous les liens internes
-          attachInternalLinks();
         })
         .catch(err => {
           console.error(err);
-          document.getElementById('contenu').innerHTML = `<p style="color:red;">Impossible de charger la page : ${page}</p>`;
+          document.getElementById('contenu').innerHTML = `<p>Impossible de charger la page : ${page}</p>`;
         });
-    }
-
-    // Fonction pour transformer les liens internes en appels fetch
-    function attachInternalLinks() {
-      const links = document.querySelectorAll('[data-page]');
-      links.forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          const page = link.getAttribute('data-page');
-          chargerPage(page);
-        });
-      });
     }
 
     // Charger la page d'accueil par défaut
