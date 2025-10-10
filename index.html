@@ -2,44 +2,34 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Adaopte</title>
-
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/adopt.css">
-
+  <link rel="stylesheet" href="./csss/adopt.css">
+  <title>Page principale</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    nav { background: #eee; padding: 10px; }
-    nav button { margin-right: 10px; }
-    #contenu { padding: 20px; }
+    body { font-family: Arial; }
+    #contenu { margin-top: 20px; }
   </style>
 </head>
 <body>
-  <nav>
-    <button onclick="chargerPage('home/home.html')">Accueil</button>
-    <button onclick="chargerPage('home/adopt.html')">Adoption</button>
-  </nav>
-
+  <!-- Ici le contenu des autres pages sera injecté -->
   <div id="contenu"></div>
 
   <script>
+    // Fonction pour charger un autre HTML
     function chargerPage(page) {
       fetch(page)
         .then(response => {
-          if (!response.ok) throw new Error(`Erreur ${response.status} en chargeant ${page}`);
+          if (!response.ok) throw new Error("Erreur chargement HTML");
           return response.text();
         })
         .then(data => {
           document.getElementById('contenu').innerHTML = data;
         })
-        .catch(err => {
-          console.error(err);
-          document.getElementById('contenu').innerHTML = `<p>Impossible de charger la page : ${page}</p>`;
-        });
+        .catch(err => console.error(err));
     }
 
-    // Charger la page d'accueil par défaut
+    // Exemple : charger 'autrePage.html' au chargement
     chargerPage('home/home.html');
   </script>
 </body>
