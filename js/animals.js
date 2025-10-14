@@ -6,7 +6,7 @@ async function displayPhotosHome() {
 
   animals.forEach((animal, index) => {
     const div = imageDivs[index]
-    div.style.backgroundImage = `url(${animal.imageUrl})`
+    div.style.backgroundImage = `url(/Adaopte/${animal.imageUrl})`
     div.style.backgroundSize = "cover"
     div.style.backgroundPosition = "center"
     div.style.backgroundRepeat = "no-repeat"
