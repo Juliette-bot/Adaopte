@@ -126,7 +126,7 @@ function displayPhotosAdopt(array) {
 
         const cardPhoto = document.createElement("div")
         cardPhoto.classList.add("cardPhotoAdopt")
-        cardPhoto.style.backgroundImage = `url(${animal.imageUrl})`
+        cardPhoto.style.backgroundImage = `url(../${animal.imageUrl})`
         cardPhoto.style.backgroundPosition = `center`
         cardPhoto.style.backgroundSize = `cover`
         cardPhoto.alt = animal.name
