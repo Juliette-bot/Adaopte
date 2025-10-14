@@ -8,7 +8,7 @@
     "city": "Lille",
     "zipcode": "59000",
     "description": "Charlie est un petit chien calme et affectueux qui adore les balades tranquilles et les caresses sur le canapé.",
-    "imageUrl": "/assets/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg"
+    "imageUrl": "assets/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg"
   },
   {
     "name": "Mia",
@@ -18,7 +18,7 @@
     "city": "Strasbourg",
     "zipcode": "67000",
     "description": "Mia est une boule de tendresse curieuse et joueuse, toujours prête à ronronner près de vous.",
-    "imageUrl": "/assets/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg"
+    "imageUrl": "assets/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg"
   },
   {
     "name": "Coco",
@@ -38,7 +38,7 @@
     "city": "Grenoble",
     "zipcode": "38000",
     "description": "Rex est un chien loyal et majestueux, idéal pour une personne douce et patiente qui aime les câlins silencieux.",
-    "imageUrl": "/assets/alan-king-KZv7w34tluA-unsplash.jpg"
+    "imageUrl": "assets/alan-king-KZv7w34tluA-unsplash.jpg"
   },
   {
     "name": "Luna",
@@ -48,7 +48,7 @@
     "city": "Bordeaux",
     "zipcode": "33000",
     "description": "Luna adore les coins ensoleillés et les siestes à vos côtés. Elle vous offrira tout l’amour d’un regard félin.",
-    "imageUrl": "/assets/jae-park-7GX5aICb5i4-unsplash.jpg"
+    "imageUrl": "assets/jae-park-7GX5aICb5i4-unsplash.jpg"
   },
   {
     "name": "Biscuit",
@@ -58,7 +58,7 @@
     "city": "Tours",
     "zipcode": "37000",
     "description": "Biscuit est tout petit mais plein de vie ! Il aime les légumes croquants et les instants de douceur en famille.",
-    "imageUrl": "/assets/yosei-g-OVgE3m4MHKM-unsplash.jpg"
+    "imageUrl": "assets/yosei-g-OVgE3m4MHKM-unsplash.jpg"
   },
   {
     "name": "Rio",
@@ -68,7 +68,7 @@
     "city": "Poitiers",
     "zipcode": "86000",
     "description": "Rio est discret, mignon comme tout, et adore explorer les petits coins de la maison avec délicatesse.",
-    "imageUrl": "/assets/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg"
+    "imageUrl": "assets/melanie-kreutz-IFnknR2Mv5o-unsplash.jpg"
   },
   {
     "name": "Ruby",
@@ -78,7 +78,7 @@
     "city": "Chamonix",
     "zipcode": "74400",
     "description": "Ruby est une boule de neige pleine d’amour ! Elle adore les promenades et les câlins par temps frais.",
-    "imageUrl": "/assets/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
+    "imageUrl": "assets/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg"
   },
   {
     "name": "Raven",
@@ -88,7 +88,7 @@
     "city": "Lyon",
     "zipcode": "69100",
     "description": "Raven est un chat très énergique, qui adore être en hauteur et vous juger. Elle est également très caline, mais uniquement quand elle l'a décidé.",
-    "imageUrl": "/assets/raven.jpg"
+    "imageUrl": "assets/raven.jpg"
   },
     {
     "name": "Ragnar",
@@ -98,7 +98,7 @@
     "city": "Lyon",
     "zipcode": "69100",
     "description": "Ragnar est un gros patapouf qui adore les caresses et se faire brosser. Il est également très joueur",
-    "imageUrl": "/assets/ragnar.jpg"
+    "imageUrl": "assets/ragnar.jpg"
   },
   {
     "name": "Miette",
@@ -108,6 +108,6 @@
     "city": "Lyon",
     "zipcode": "69007",
     "description": "Du haut de ses minis pattes, Miette vous jugera dans un premier temps, puis ne vous lâchera plus de la journée. Succombez à ses grands yeux ronds qui crient amour !",
-    "imageUrl": "/assets/Miette.jpg"
+    "imageUrl": "assets/Miette.jpg"
   }
 ]

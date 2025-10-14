@@ -54,10 +54,12 @@ body {
 
 .gris {
     color: var(--dark-color);
+    font-size: 1.5rem;
 }
 
 .orange {
     color: var(--secondary-color);
+    font-size: 1.5rem;
 }
 
 
